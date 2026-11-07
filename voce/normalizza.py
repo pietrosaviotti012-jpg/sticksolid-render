@@ -99,7 +99,7 @@ def normalizza(t):
     t = re.sub(r"\b(1[0-9]|20)(\d)0s\b", lambda m: year(int(m[1] + m[2] + "0")).replace("ty", "ties") if m[2] != "0" else year(int(m[1] + "00")) + "s", t)
     t = re.sub(r"'([2-9])0s\b", lambda m: TENS[int(m[1])][:-1] + "ies", t)
     # years: a 4-digit number 1100-2099 that is not a quantity (no comma, not followed by a unit or plural noun)
-    t = re.sub(r"(?<![\d,.$#])\b(1[1-9]\d\d|20\d\d)\b(?!\d|[,.]\d|\s*(?:%|km|kg|m\b|meters|miles|people|feet|dollars|years|times|lbs|tons))", lambda m: year(m[1]), t)
+    t = re.sub(r"(?<![\d,.$#])\b(1[1-9]\d\d|20\d\d)\b(?!\d|[,.]\d|\s*(?:%|km|kg|m\b|meters|metres|kilomet|kilogram|miles|mph|kph|degrees|pounds|euros|people|feet|dollars|years|times|lbs|tons))", lambda m: year(m[1]), t)
     # ordinals: 23rd, 1st, 21st
     t = re.sub(r"\b(\d+)(st|nd|rd|th)\b", lambda m: ordinal(m[1]), t)
     # numbers with units: 1,670 km/h, -40°C, 9.58 s, 41%

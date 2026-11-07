@@ -62,13 +62,29 @@ def check(path):
     text, a = heard(path)
     got = toks(text)
     sm = difflib.SequenceMatcher(a=want, b=got, autojunk=False)
-    errs = []
+    # which line every expected word belongs to, to listen to a doubtful line again on its own
+    line_of = [m["i"] for m in meta for _ in toks(m["spoken"])]
+    errs, doubts, bad = [], [], 0
     for op, i1, i2, j1, j2 in sm.get_opcodes():
-        if op != "equal": errs.append((" ".join(want[i1:i2]) or "—", " ".join(got[j1:j2]) or "—"))
-    wer = sum(max(i2 - i1, j2 - j1) for op, i1, i2, j1, j2 in sm.get_opcodes() if op != "equal") / max(1, len(want))
+        if op == "equal": continue
+        e = (" ".join(want[i1:i2]) or "—", " ".join(got[j1:j2]) or "—")
+        # Parakeet hears the whole take at once, and its language model sometimes "corrects" a clear word from the
+        # sentence before ("nothing else would. You would..." -> "It would"). If the line, heard alone, is exactly
+        # right, the audio is fine: it is listed as a doubt, not as an error.
+        li = line_of[min(i1, len(line_of) - 1)] if line_of else None
+        if li is not None and "start" in meta[li] and line_alone_ok(a, meta[li]): doubts.append(e); continue
+        errs.append(e); bad += max(i2 - i1, j2 - j1)
+    wer = bad / max(1, len(want))
     dur = len(a) / kitwords.SR; lufs, peak = loudness(path)
     return {"file": os.path.basename(path), "dur": round(dur, 1), "wps": round(len(want) / dur, 2), "wer": round(wer * 100, 1),
-            "lufs": lufs, "peak": peak, "silence": round(longest_silence(a), 2), "errors": errs, "heard": text}
+            "lufs": lufs, "peak": peak, "silence": round(longest_silence(a), 2), "errors": errs, "dubbi_contesto": doubts, "heard": text}
+
+
+def line_alone_ok(a, m):
+    """transcribe one line of the take on its own and compare it with what it should say"""
+    sr = kitwords.SR; s0 = max(0, int((m["start"] - 0.05) * sr)); s1 = int((m["start"] + m["dur"] + 0.08) * sr)
+    s = _rec.create_stream(); s.accept_waveform(sr, a[s0:s1]); _rec.decode_stream(s)
+    return toks(s.result.text) == toks(m["spoken"])
 
 
 if __name__ == "__main__":

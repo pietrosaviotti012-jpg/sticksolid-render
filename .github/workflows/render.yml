@@ -1,0 +1,204 @@
+# StickSolid · render: from a production folder in the private repo sticksolid-studio to the finished, checked video.
+#   voce    (1 machine)   voice, word times, captions, time warp: catena/produci.py --fino tempi
+#   frames  (6 machines)  each draws one slice of the frames (engines/stick or engines/solid, FRAME_FROM..FRAME_TO)
+#   finale  (1 machine)   joins the slices, then mix, sounds (Real SFX), closing card, cover, contact sheet, checks
+# The heavy work runs here, in the public repository, where GitHub's minutes are free; the Claude routines only write
+# the script and the scenes (lesson 2 of the guide). Every stage is saved as an artifact as soon as it is ready.
+#
+# Needs one secret, created by the user: STUDIO_READ_TOKEN, a fine-grained token with read-only access ("Contents:
+# read") to sticksolid-studio. The production is read with it and never written back.
+# The finished video stays an artifact (14 days) until Approva: it goes to a Release only when the user approves it.
+#
+# Start: Actions -> render -> Run workflow (video = the production id, e.g. storia-1),
+#        or a repository_dispatch of type "render" with {"video": "storia-1"} (the routines and the new Office).
+name: render
+
+on:
+  workflow_dispatch:
+    inputs:
+      video:
+        description: "Production id in sticksolid-studio/productions (e.g. storia-1)"
+        required: true
+  repository_dispatch:
+    types: [render]
+
+concurrency:
+  group: render-${{ inputs.video || github.event.client_payload.video }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  VIDEO: ${{ inputs.video || github.event.client_payload.video }}
+  STUDIO_REPO: ${{ github.repository_owner }}/sticksolid-studio
+  STICKSOLID_KIT: ${{ github.workspace }}/render/skills/kit
+  REAL_SFX: ${{ github.workspace }}/studio/skills-esterne/real-sfx
+  SLICES: 6
+
+jobs:
+  voce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      frames: ${{ steps.frames.outputs.n }}
+      who: ${{ steps.frames.outputs.who }}
+    steps:
+      - name: Which video
+        run: |
+          echo "$VIDEO" | grep -Eq '^[a-z0-9][a-z0-9-]{0,60}$' || { echo "id del video non valido: '$VIDEO'"; exit 1; }
+      - uses: actions/checkout@v4
+        with:
+          path: render
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.STUDIO_REPO }}
+          token: ${{ secrets.STUDIO_READ_TOKEN }}
+          path: studio
+          sparse-checkout: |
+            productions/${{ env.VIDEO }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Voice models cache
+        uses: actions/cache@v4
+        with:
+          path: render/skills/kit/models
+          key: kit-models-v1
+      - name: Kit (Kokoro, Parakeet, Praat)
+        run: |
+          bash render/skills/kit/setup.sh --voice
+          render/skills/kit/.venv/bin/pip install -q praat-parselmouth
+      - name: Voce, parole, didascalie, tempi
+        run: cd render && "$STICKSOLID_KIT/.venv/bin/python" -u catena/produci.py "../studio/productions/$VIDEO" --fino tempi
+      - name: How many frames
+        id: frames
+        run: |
+          P="studio/productions/$VIDEO"
+          echo "n=$(python3 -c "import json;print(round(json.load(open('$P/project/catena.json'))['duration']*30))")" >> "$GITHUB_OUTPUT"
+          echo "who=$(python3 -c "import json;print(json.load(open('$P/meta.json'))['who'])")" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voce
+          path: |
+            studio/productions/${{ env.VIDEO }}/project/catena.json
+            studio/productions/${{ env.VIDEO }}/out
+          retention-days: 3
+
+  frames:
+    needs: voce
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: true
+      matrix:
+        slice: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: render
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.STUDIO_REPO }}
+          token: ${{ secrets.STUDIO_READ_TOKEN }}
+          path: studio
+          sparse-checkout: |
+            productions/${{ env.VIDEO }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: voce
+          path: studio/productions/${{ env.VIDEO }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: three.js, Playwright and Chromium
+        run: cd render/skills/kit && npm install --silent --no-audit --no-fund && npx --yes playwright install --with-deps chromium >/dev/null
+      - name: Slice ${{ matrix.slice }}
+        env:
+          N: ${{ needs.voce.outputs.frames }}
+          WHO: ${{ needs.voce.outputs.who }}
+          GL: swiftshader
+        run: |
+          export FRAME_FROM=$(( N * ${{ matrix.slice }} / SLICES )) FRAME_TO=$(( N * (${{ matrix.slice }} + 1) / SLICES ))
+          echo "fotogrammi $FRAME_FROM-$FRAME_TO di $N ($WHO)"
+          mkdir -p segs
+          node "render/engines/$WHO/render.mjs" "studio/productions/$VIDEO/project" video "segs/seg_${{ matrix.slice }}.mp4" 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seg-${{ matrix.slice }}
+          path: segs/seg_${{ matrix.slice }}.mp4
+          retention-days: 3
+
+  finale:
+    needs: [voce, frames]
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: render
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.STUDIO_REPO }}
+          token: ${{ secrets.STUDIO_READ_TOKEN }}
+          path: studio
+          sparse-checkout: |
+            productions/${{ env.VIDEO }}
+            identita/chiusura
+            skills-esterne/real-sfx
+      - uses: actions/download-artifact@v4
+        with:
+          name: voce
+          path: studio/productions/${{ env.VIDEO }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: seg-*
+          path: segs
+          merge-multiple: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Voice models cache
+        uses: actions/cache@v4
+        with:
+          path: render/skills/kit/models
+          key: kit-models-v1
+      - name: Kit, Chromium (cover), Real SFX
+        run: |
+          bash render/skills/kit/setup.sh --voice
+          render/skills/kit/.venv/bin/pip install -q praat-parselmouth
+          (cd render/skills/kit && npx --yes playwright install --with-deps chromium >/dev/null)
+          python3 render/catena/ci_suoni.py "$REAL_SFX" render
+      - name: Join the slices
+        run: |
+          O="studio/productions/$VIDEO/out"; mkdir -p "$O"
+          for i in $(seq 0 $((SLICES - 1))); do echo "file '$PWD/segs/seg_$i.mp4'"; done > segs/list.txt
+          ffmpeg -y -v error -f concat -safe 0 -i segs/list.txt -c copy "$O/muto.mp4"
+      - name: Mix, suoni, finale, copertina, provini, controllo
+        run: |
+          cd render
+          "$STICKSOLID_KIT/.venv/bin/python" -u catena/produci.py "../studio/productions/$VIDEO" --da mix | tee ../controllo.log
+          grep -q "CONTROLLO: passa" ../controllo.log || echo "::warning::il controllo qualità non passa, vedi controllo.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ env.VIDEO }}
+          path: |
+            studio/productions/${{ env.VIDEO }}/out/${{ env.VIDEO }}.mp4
+            studio/productions/${{ env.VIDEO }}/out/copertina.png
+            studio/productions/${{ env.VIDEO }}/out/provini.jpg
+            studio/productions/${{ env.VIDEO }}/out/controllo.json
+            studio/productions/${{ env.VIDEO }}/out/regia.json
+            studio/productions/${{ env.VIDEO }}/out/sfx/critica.md
+          retention-days: 14

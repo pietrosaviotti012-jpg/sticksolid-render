@@ -95,6 +95,8 @@ function drawStick(ctx, o) {
     else if (hat === 'sailor') drawSailorHat(ctx, hx, hy, hr, lw);
     else if (hat === 'captain') drawCaptainHat(ctx, hx, hy, hr, lw);
     else if (hat === 'helmet' || hat === 'cap' || hat === 'tophat') drawExtraHat(ctx, hat, hx, hy, hr, o.hatCol, lw);
+    // a hat drawn by the story's own scene files: hat 'tricorn' calls drawTricorn(ctx, hx, hy, hr, lw, hatCol)
+    else if (hat !== 'none' && typeof globalThis['draw' + hat[0].toUpperCase() + hat.slice(1)] === 'function') globalThis['draw' + hat[0].toUpperCase() + hat.slice(1)](ctx, hx, hy, hr, lw, o.hatCol);
   }
   if (!sil) { circle(ctx, hx, hy, hr); fillStroke(ctx, null, lw); }
   if (!sil && o.hair === 'tuft') drawTufts(ctx, hx, hy, hr, hairCol, lw);

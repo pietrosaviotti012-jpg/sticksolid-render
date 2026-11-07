@@ -26,10 +26,10 @@ def _kit():
 
 KIT = _kit()
 CREATOR = ("highpass=f=70,equalizer=f=120:t=q:w=1:g=3,equalizer=f=3200:t=q:w=1.2:g=2.5,"
-           "acompressor=threshold=-20dB:ratio=3:attack=5:release=90:makeup=2,loudnorm=I=-14:TP=-1.5")
+           "acompressor=threshold=-20dB:ratio=3:attack=15:release=90:makeup=2,loudnorm=I=-14:TP=-1.5")
 # a darker master for tense stories (Your call): more chest, less shine, a touch of room
 CUPO = ("highpass=f=60,equalizer=f=110:t=q:w=1:g=4.5,equalizer=f=450:t=q:w=1.5:g=-2,equalizer=f=3000:t=q:w=1.2:g=1,"
-        "lowpass=f=9500,aecho=0.8:0.5:45:0.12,acompressor=threshold=-22dB:ratio=3.5:attack=5:release=110:makeup=2,loudnorm=I=-14:TP=-1.5")
+        "lowpass=f=9500,aecho=0.8:0.5:45:0.12,acompressor=threshold=-22dB:ratio=3.5:attack=15:release=110:makeup=2,loudnorm=I=-14:TP=-1.5")
 MASTERS = {"creator": None, "cupo": CUPO}
 FX = {
     "radio": "highpass=f=450,lowpass=f=3000,acrusher=bits=10:mix=0.25,equalizer=f=1800:t=q:w=1:g=6,volume=0.9",
@@ -77,15 +77,24 @@ def ffx(samples, sr, chain):
         return sf.read(b, dtype="float32")[0]
 
 
-def make(lines, out, voice="am_puck", speed=1.15, raw=False, master="creator"):
+def make(lines, out, voice="am_puck", speed=1.15, raw=False, master="creator", regia=None):
+    """regia: None = flat reading as before; a list of line plans from regia.piano() = directed reading"""
     parts, meta, t, sr = [], [], 0.0, 24000
     for i, ln in enumerate(lines):
         ln = {"text": ln} if isinstance(ln, str) else ln
-        s, sr = say(ln["text"], ln.get("voice", voice), ln.get("speed", speed), raw)
+        p = regia[i] if regia else None
+        sp = ln.get("speed", speed) * (p["velocita"] if p else 1)
+        if p: sp = min(sp, 1.2)                                          # faster than 1.2 Kokoro starts to swallow words
+        s, sr = say(ln["text"], ln.get("voice", voice), sp, raw)
+        if p:
+            from regia import prosodia
+            s = prosodia(s, sr, p, ln["text"] if raw else normalizza(ln["text"]))
+            if p["pausa_prima"] and parts: parts.append(np.zeros(int(p["pausa_prima"] * sr), dtype=np.float32)); t += p["pausa_prima"]
         if ln.get("fx"): s = ffx(s, sr, FX[ln["fx"]])
-        gap = ln.get("gap", 0.07 + (0.12 if i == 0 or ln["text"].rstrip().endswith(("?", "!")) else 0))
+        gap = ln.get("gap", (0.06 + p["pausa_dopo"]) if p else 0.07 + (0.12 if i == 0 or ln["text"].rstrip().endswith(("?", "!")) else 0))
         meta.append({"i": i, "text": ln["text"], "spoken": ln["text"] if raw else normalizza(ln["text"]),
-                     "voice": ln.get("voice", voice), "fx": ln.get("fx"), "start": round(t, 3), "dur": round(len(s) / sr, 3)})
+                     "voice": ln.get("voice", voice), "fx": ln.get("fx"), "start": round(t, 3), "dur": round(len(s) / sr, 3),
+                     **({"regia": {k: v for k, v in p.items() if k != "perche"}} if p else {})})
         parts += [s, np.zeros(int(gap * sr), dtype=np.float32)]; t += len(s) / sr + gap
     vo = np.concatenate(parts)
     tmp = out.rsplit(".", 1)[0] + ".raw.wav"; sf.write(tmp, vo, sr)

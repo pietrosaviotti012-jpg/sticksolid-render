@@ -81,3 +81,9 @@ function drawStickMove(ctx, name, t, base) {
   const o = stickMove(name, t, base.extra);
   drawStick(ctx, { ...base, ...o, x: base.x + (o.dx || 0) * base.s, y: base.y + (o.dy || 0) * base.s, squash: o.squash });
 }
+// the stride of a stick-figure scene, with the channel's walk and run: the skill's walkLegs / walkArms(t, sp) gave
+// a stride speed sp in radians per second; at 14 and above it is a run. Returns the whole move (legs, arms, bob, lean).
+function stickStride(t, sp = 9) {
+  const name = sp >= 14 ? 'run' : 'walk', m = STICK_MOVES[name];
+  return m.f(t * sp / (2 * PI) * m.len);
+}
