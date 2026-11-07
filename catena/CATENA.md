@@ -70,8 +70,8 @@ La stessa catena, divisa su più macchine.
 
 Le istruzioni sono in `sticksolid-studio/routines/COPIONE-E-SCENE.md`.
 
+**Provato il 7 novembre su True Story #1**: circa 7 minuti per video (voce 2, fotogrammi 1-1,5 su 6 macchine, finale 3-4), con gli stessi numeri del PC. Funziona sia avviato a mano sia avviato da `avvia-render` del repository privato.
+
 ## Ancora da fare
 
-- Caricare tutto su GitHub, con il sì dell'utente.
-- I due token, che crea l'utente.
-- La prima prova di `render.yml`, poi l'accensione delle routine.
+- Accendere le routine, con il sì dell'utente.
