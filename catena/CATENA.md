@@ -24,7 +24,7 @@ Si lancia con il Python del kit, dove ci sono Kokoro, Parakeet e numpy. La prima
 | `finale` | aggiunge la chiusura con il pugno e il suono firma (`studio/identita/chiusura/`) | ffmpeg | |
 | `copertina` | la copertina, dalla scheda del video (`meta.json` → `copertina`) | `kit/cover.html` | |
 | `provini` | 12 fotogrammi da guardare prima di Approva | ffmpeg | gli occhi di una persona |
-| `controllo` | la voce riascoltata (parole sbagliate, velocità, pause, melodia), il volume, il formato e **i flash** del file finito | `voce/controllo.py`, Praat | scrive **passa** o **NON PASSA** con il motivo: 0% parole sbagliate, melodia almeno 4,2, nessun flash, -16,5…-13 LUFS, picco sotto -1 dB |
+| `controllo` | la voce riascoltata (parole sbagliate, velocità, pause, melodia), il volume, il formato e **i flash** del file finito | `voce/controllo.py`, Praat | scrive **passa** o **NON PASSA** con il motivo: 0% parole sbagliate, melodia almeno 4,2, nessun flash, -16,5…-13 LUFS, picco sotto -1 dB; per True story e What if almeno 2 fonti in `copione.md` (QC-09) |
 
 Gli errori trovati nei video e i controlli che li bloccano sono in `sticksolid-studio/office/CONTROLLO-QUALITA.md`.
 
@@ -72,6 +72,6 @@ Le istruzioni sono in `sticksolid-studio/routines/COPIONE-E-SCENE.md`.
 
 **Provato il 7 novembre su True Story #1**: circa 7 minuti per video (voce 2, fotogrammi 1-1,5 su 6 macchine, finale 3-4), con gli stessi numeri del PC. Funziona sia avviato a mano sia avviato da `avvia-render` del repository privato.
 
-## Ancora da fare
+## La fase 3 è finita (7 novembre 2026)
 
-- Accendere le routine, con il sì dell'utente.
+Le routine Ricerca e Copione e Scene sono accese (`sticksolid-studio/routines/README.md`). Il passo dopo è la fase 4, il virality predictor.

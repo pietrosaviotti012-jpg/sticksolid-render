@@ -283,7 +283,22 @@ class Prod:
         if rep["video"]["flash"]: ko.append(f"flash in {len(rep['video']['flash'])} fotogrammi: {rep['video']['flash'][:8]}")
         if not -16.5 <= lufs <= -13: ko.append(f"volume {lufs} LUFS")
         if peak > -1: ko.append(f"picco {peak} dBTP")
+        # "Fatti": a true story or a what if has its sources in copione.md (a "## ... fonti" or "## ... sources" section,
+        # one list item per fact). Fewer than 2 stops the video; items without a link are only flagged, to look at.
+        if self.meta.get("formato") in ("storia-vera", "what-if"):
+            f = self.fatti(); rep["fatti"] = f
+            if f["voci"] < 2: ko.append(f"fonti: {f['voci']} in copione.md (ne servono almeno 2)")
+            elif f["senza_link"]: print(f"  fatti: {f['voci']} fonti, {f['senza_link']} senza link (da aggiungere prima di pubblicare)")
+            json.dump(rep, open(os.path.join(self.out, "controllo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print("  CONTROLLO:", "NON PASSA · " + "; ".join(ko) if ko else "passa")
+
+    def fatti(self):
+        """the sources section of copione.md: how many facts are listed and how many have no link"""
+        p = os.path.join(self.d, "copione.md")
+        txt = open(p, encoding="utf-8").read() if os.path.exists(p) else ""
+        m = re.search(r"^##[^\n]*(fonti|sources)[^\n]*\n(.*?)(?=^## |\Z)", txt, re.I | re.M | re.S)
+        items = re.findall(r"^\s*[-*] (.+)$", m.group(2), re.M) if m else []
+        return {"voci": len(items), "senza_link": sum("http" not in x for x in items)}
 
     @staticmethod
     def flash(path):
