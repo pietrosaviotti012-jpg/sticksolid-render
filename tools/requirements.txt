@@ -1,0 +1,9 @@
+# Studio tools (voice, score, mix). Install with the CPU build of torch:
+#   pip install --extra-index-url https://download.pytorch.org/whl/cpu -r tools/requirements.txt
+chatterbox-tts
+setuptools<81        # chatterbox's watermarker needs pkg_resources
+faster-whisper
+av<19                # av 19 breaks faster-whisper (metadata_errors)
+soundfile
+numpy
+scipy

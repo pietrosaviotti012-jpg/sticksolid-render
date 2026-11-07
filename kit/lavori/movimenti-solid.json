@@ -1,0 +1,292 @@
+[
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-idle.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "idle",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-walk.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "walk",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.6,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-run.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "run",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.6,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-jump.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "jump",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-wave.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "wave",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-surprise.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "surprise",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-shrug.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "shrug",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-point.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "point",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-think.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "think",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "fn": "renderMan",
+  "to": 2,
+  "fps": 30,
+  "out": "out/movimenti/solid-cheer.mp4",
+  "size": [
+   400,
+   400
+  ],
+  "cfg": {
+   "move": "cheer",
+   "bg": "#fdf0d5",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "turn": -0.15,
+   "fov": 27,
+   "camPos": [
+    0,
+    1.25,
+    5.8
+   ],
+   "camLook": [
+    0,
+    1.08,
+    0
+   ]
+  }
+ }
+]

@@ -1,0 +1,95 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>scheda personaggi</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="2400" height="4250"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script>
+<script>
+// window.renderScheda() -> JPEG data URL: the StickSolid character sheet (poses, 12 expressions, together, colours)
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+const RED = '#e0392f', BLUE = '#2f63c9', YEL = '#ffc93c', PAPER = '#faf6ee', GREY = '#6b6370';
+// the mascot stickman: plain red top, no hat or belt, thick legs and arms
+const STICK = { hat: 'none', belt: false, cols: [RED, RED], legW: 2.2, armW: 1.4 };
+const label = (s, x, y, size = 40, col = INK) => text(ctx, s, x, y, size, col, null, 0);
+const left = (s, x, y, size = 36, col = INK) => text(ctx, s, x, y, size, col, null, 0, 'Poppins', 700, 'left');
+function card(x, y, w, h, fill = '#fff') { rrect(ctx, x, y, w, h, 36); ctx.fillStyle = fill; ctx.fill(); }
+function chip(x, y, col, name, sub) {
+  circle(ctx, x + 40, y, 34); fillStroke(ctx, col, 6);
+  left(name, x + 100, y - 4, 76);
+  left(sub, x + 100 + ctx.measureText(name).width + 30, y + 4, 34, GREY);
+}
+function traits(lines, x, y) { lines.forEach((s, i) => left('· ' + s, x, y + i * 58, 34)); }
+function faceGrid(names, y, cellFill, draw) {
+  names.forEach((n, i) => {
+    const cx = 260 + (i % 6) * 376, cy = y + Math.floor(i / 6) * 340;
+    ctx.save(); rrect(ctx, cx - 160, cy - 140, 320, 260, 30); ctx.clip(); ctx.fillStyle = cellFill; ctx.fill(); draw(n, cx, cy); ctx.restore();
+    label(n, cx, cy + 160, 32, GREY);
+  });
+}
+window.renderScheda = async () => {
+  const E = await (await fetch('espressioni.json?' + Date.now())).json(); delete E._;
+  const names = Object.keys(E);
+  const W = cv.width;
+  ctx.fillStyle = PAPER; ctx.fillRect(0, 0, W, cv.height);
+  left('StickSolid', 90, 110, 110);
+  left('scheda dei personaggi', 90, 190, 44, GREY);
+  const prof = await load('out/foto-profilo-1c.png');
+  ctx.save(); circle(ctx, W - 190, 140, 110); ctx.clip(); ctx.drawImage(prof, W - 300, 30, 220, 220); ctx.restore();
+
+  // ---- STICK ----
+  let y0 = 270;
+  card(60, y0, W - 120, 1640);
+  chip(110, y0 + 90, RED, 'Stick', 'lo stickman · storie vere e misteri');
+  const poses = [
+    ['fermo', { arms: POSE.idle.arms, legs: POSE.idle.legs, face: { mouth: 'smile' } }],
+    ['ciao', { arms: { L: [2.5, 0.5], R: [0.35, -0.1] }, face: { eyes: 'happy', mouth: 'grin' }, blush: true }],
+    ['indica', { arms: { L: [0.35, -0.1], R: [1.55, 0.05] }, face: { mouth: 'grin', look: [0.7, 0] } }],
+  ];
+  poses.forEach(([n, o], i) => {
+    const cx = 330 + i * 450;
+    drawStick(ctx, { ...STICK, ...o, x: cx, y: y0 + 820, s: 600 });
+    label(n, cx, y0 + 890, 38, GREY);
+  });
+  traits(['testa bianca grande', 'maglia rossa tinta unita', 'gambe e braccia spesse', 'niente cappello né cintura', 'contorno color inchiostro', 'curioso, si stupisce per primo'], 1560, y0 + 300);
+  faceGrid(names, y0 + 1060, '#fff4dc', (n, cx, cy) => {
+    const e = E[n].stick, s = 560;
+    drawStick(ctx, { ...STICK, ...e, face: e.face, x: cx, y: cy - 20 + 0.765 * s, s, shadow: false });
+    if (e.sweat) sweat(ctx, cx + 0.2 * s, cy - 0.12 * s, 30);
+  });
+
+  // ---- SOLID ----
+  y0 = 1970;
+  card(60, y0, W - 120, 1640);
+  chip(110, y0 + 90, BLUE, 'Solid', "l'omino 3D · i “what if” di scienza");
+  const sp = ['fermo', 'ciao', 'indica'];
+  for (let i = 0; i < 3; i++) {
+    const img = await load(`out/scheda/solid-${sp[i]}.png`), cx = 330 + i * 450;
+    ctx.drawImage(img, cx - 360, y0 + 130, 720, 720);
+    label(sp[i], cx, y0 + 890, 38, GREY);
+  }
+  traits(['maglietta blu a maniche corte', 'maglietta lunga fino ai fianchi, jeans scuri', 'scarpe bianche', 'ciuffo castano, occhi grandi', 'corpo uniforme, braccia e gambe robuste', 'calmo, spiega, a volte resta a bocca aperta'], 1560, y0 + 300);
+  const faces = {};
+  for (const n of names) faces[n] = await load(`out/scheda/solid-faccia-${n}.png`);
+  faceGrid(names, y0 + 1060, '#e8f0ff', (n, cx, cy) => ctx.drawImage(faces[n], cx - 230, cy - 250, 460, 460));
+
+  // ---- INSIEME + COLORI ----
+  y0 = 3670;
+  card(60, y0, 1100, 520);
+  label('quando sono insieme', 610, y0 + 70, 40);
+  ctx.save(); rrect(ctx, 110, y0 + 115, 370, 370, 40); ctx.clip(); ctx.drawImage(prof, 110, y0 + 115, 370, 370); ctx.restore();
+  ['a mezzo busto, mai a figura intera', 'teste della stessa misura', 'e alla stessa altezza', 'Stick a sinistra, Solid a destra', 'Stick con il corpo più grande', 'si guardano, o guardano chi legge']
+    .forEach((s, i) => left('· ' + s, 520, y0 + 150 + i * 60, 32));
+  card(1220, y0, W - 1280, 520);
+  label('colori', 1220 + (W - 1280) / 2, y0 + 70, 40);
+  const sw = [[RED, 'rosso Stick'], [BLUE, 'blu Solid'], [YEL, 'giallo canale'], [INK, 'inchiostro'],
+    ['#f6f2ea', 'testa Stick'], ['#d99b7a', 'pelle Solid'], ['#3a2618', 'capelli'], ['#2a2f3d', 'jeans']];
+  sw.forEach(([c, n], i) => {
+    const cx = 1330 + (i % 4) * 260, cy = y0 + 190 + Math.floor(i / 4) * 190;
+    circle(ctx, cx + 40, cy, 52); fillStroke(ctx, c, 5);
+    text(ctx, n, cx + 40, cy + 82, 28, INK, null, 0); text(ctx, c, cx + 40, cy + 114, 24, GREY, null, 0);
+  });
+  return cv.toDataURL('image/jpeg', 0.92);
+};
+document.fonts.load('700 40px Poppins').then(() => { window.schedaReady = true; });
+</script></body></html>

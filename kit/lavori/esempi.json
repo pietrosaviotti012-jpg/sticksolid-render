@@ -1,0 +1,378 @@
+[
+ {
+  "page": "man",
+  "out": "out/parti/man-1.png",
+  "cfg": {
+   "pose": "stand",
+   "shirt": "#2f63c9",
+   "ground": false,
+   "fov": 13,
+   "camPos": [
+    0,
+    1.62,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.56,
+    0
+   ],
+   "turn": -0.25,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "smile": true,
+    "eyes": 1.35
+   },
+   "poseExtra": {
+    "head": [
+     0.06,
+     0.05,
+     -0.1
+    ]
+   }
+  }
+ },
+ {
+  "page": "compose",
+  "out": "out/esempio-1.png",
+  "cfg": {
+   "bg": "#ffc93c",
+   "guide": false,
+   "man": {
+    "src": "out/parti/man-1.png",
+    "x": 230,
+    "y": 150,
+    "w": 1600
+   },
+   "stick": {
+    "x": 470,
+    "y": 1520,
+    "s": 1000,
+    "cols": [
+     "#e0392f",
+     "#e0392f"
+    ],
+    "arms": {
+     "L": [
+      2.5,
+      0.5
+     ],
+     "R": [
+      0.35,
+      -0.1
+     ]
+    },
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "headTilt": 0.08,
+    "face": {
+     "eyes": "happy",
+     "mouth": "grin",
+     "look": [
+      0.3,
+      0
+     ]
+    },
+    "blush": true
+   },
+   "zoom": 1.25,
+   "focus": [
+    745,
+    690
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/parti/man-2.png",
+  "cfg": {
+   "pose": "stand",
+   "shirt": "#2f63c9",
+   "ground": false,
+   "fov": 13,
+   "camPos": [
+    0,
+    1.62,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.56,
+    0
+   ],
+   "turn": -0.25,
+   "poseExtra": {
+    "head": [
+     -0.12,
+     -0.05,
+     0
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "compose",
+  "out": "out/esempio-2.png",
+  "cfg": {
+   "bg": "#43d9a8",
+   "guide": false,
+   "man": {
+    "src": "out/parti/man-2.png",
+    "x": 230,
+    "y": 150,
+    "w": 1600
+   },
+   "stick": {
+    "x": 470,
+    "y": 1520,
+    "s": 1000,
+    "cols": [
+     "#e0392f",
+     "#e0392f"
+    ],
+    "arms": {
+     "L": [
+      2.3,
+      0.7
+     ],
+     "R": [
+      2.3,
+      0.7
+     ]
+    },
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "face": {
+     "eyes": "wide",
+     "mouth": "o",
+     "browUp": 1,
+     "look": [
+      0.5,
+      -0.3
+     ]
+    }
+   },
+   "zoom": 1.25,
+   "focus": [
+    745,
+    690
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/parti/man-3.png",
+  "cfg": {
+   "pose": "stand",
+   "shirt": "#2f63c9",
+   "ground": false,
+   "fov": 13,
+   "camPos": [
+    0,
+    1.62,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.56,
+    0
+   ],
+   "turn": -0.12,
+   "poseExtra": {
+    "spine": [
+     0,
+     0,
+     0.08
+    ],
+    "head": [
+     0.04,
+     0.12,
+     0.1
+    ]
+   },
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "smile": true,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "compose",
+  "out": "out/esempio-3.png",
+  "cfg": {
+   "bg": "#8a6cff",
+   "guide": false,
+   "man": {
+    "src": "out/parti/man-3.png",
+    "x": 290,
+    "y": 150,
+    "w": 1600
+   },
+   "stick": {
+    "x": 470,
+    "y": 1530,
+    "s": 1000,
+    "cols": [
+     "#e0392f",
+     "#e0392f"
+    ],
+    "lean": 0.1,
+    "headTilt": 0.1,
+    "arms": {
+     "L": [
+      0.3,
+      -0.1
+     ],
+     "R": [
+      1.2,
+      -0.6
+     ]
+    },
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "face": {
+     "eyes": "normal",
+     "mouth": "smile",
+     "look": [
+      0,
+      0
+     ],
+     "browUp": 0.4
+    }
+   },
+   "zoom": 1.25,
+   "focus": [
+    745,
+    690
+   ]
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/parti/man-4.png",
+  "cfg": {
+   "pose": "stand",
+   "shirt": "#2f63c9",
+   "ground": false,
+   "fov": 13,
+   "camPos": [
+    0,
+    1.62,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.56,
+    0
+   ],
+   "turn": -0.35,
+   "poseExtra": {
+    "head": [
+     0.08,
+     -0.1,
+     0.05
+    ]
+   },
+   "face": {
+    "brow": 0.9,
+    "tilt": 0.4,
+    "lid": 0.6,
+    "smile": true,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "compose",
+  "out": "out/esempio-4.png",
+  "cfg": {
+   "bg": "#fdf0d5",
+   "guide": false,
+   "man": {
+    "src": "out/parti/man-4.png",
+    "x": 230,
+    "y": 150,
+    "w": 1600
+   },
+   "stick": {
+    "x": 470,
+    "y": 1520,
+    "s": 1000,
+    "cols": [
+     "#e0392f",
+     "#e0392f"
+    ],
+    "arms": {
+     "L": [
+      0.35,
+      -0.1
+     ],
+     "R": [
+      1.55,
+      0.05
+     ]
+    },
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "face": {
+     "eyes": "normal",
+     "mouth": "grin",
+     "look": [
+      0.6,
+      0
+     ],
+     "browUp": 0.8
+    }
+   },
+   "zoom": 1.25,
+   "focus": [
+    745,
+    690
+   ]
+  }
+ }
+]

@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>copertine</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script>
+<script>
+// window.renderCover(cfg) -> PNG data URL. One layout for every StickSolid cover (1080x1920):
+//   series pill with number (top), one or two huge words (middle), the character with a reaction (bottom).
+//   Everything that matters sits inside y 285..1635, the part Instagram keeps in the 4:5 profile grid.
+// cfg: { series: 'strange' | 'whatif', number, words: ['THE DARK', 'DAY'], man: { src, x, y, w }, stick: {...}, guide }
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+// The look follows the character, not the series: any format (WHAT IF, YOUR CALL, a new mini series) gets
+// its name in the pill (cfg.label) and the colours of whoever tells it (cfg.who: 'stick' or 'solid').
+const LOOK = {
+  stick: { name: 'STRANGE DAYS', bg: '#2b2350', bg2: '#3a2f6b', word: '#ffc93c', pill: '#e0392f', pillText: '#fff', disc: '#ffc93c' },
+  solid: { name: 'WHAT IF', bg: '#ff8a3d', bg2: '#ffa45e', word: '#ffffff', pill: '#2f63c9', pillText: '#fff', disc: '#ffd27a' },
+};
+const SERIES = { ...LOOK, strange: LOOK.stick, whatif: LOOK.solid };
+function fitWord(s, maxW, size) { ctx.font = `700 ${size}px Poppins`; while (ctx.measureText(s).width > maxW && size > 60) { size -= 6; ctx.font = `700 ${size}px Poppins`; } return size; }
+window.renderCover = async (cfg) => {
+  const S = SERIES[cfg.who || cfg.series], W = cv.width, H = cv.height;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  // background: the series colour, a little lighter in the middle
+  const g = ctx.createRadialGradient(W / 2, H * 0.55, 100, W / 2, H * 0.55, H * 0.75);
+  g.addColorStop(0, S.bg2); g.addColorStop(1, S.bg); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  // a big disc behind the character (the moon for the mysteries, a sun for the what ifs)
+  circle(ctx, W / 2, 1290, 400); ctx.fillStyle = S.disc; ctx.fill();
+  // character
+  if (cfg.man) { const m = await load(cfg.man.src); ctx.drawImage(m, cfg.man.x, cfg.man.y, cfg.man.w, cfg.man.w); }
+  if (cfg.stick) drawStick(ctx, { hat: 'none', belt: false, cols: ['#e0392f', '#e0392f'], legW: 2.2, armW: 1.4, ...cfg.stick });
+  // series pill
+  const tag = `${cfg.label || S.name}  #${cfg.number}`;
+  ctx.font = '700 46px Poppins'; const tw = ctx.measureText(tag).width + 80;
+  rrect(ctx, (W - tw) / 2, 330, tw, 84, 42); fillStroke(ctx, S.pill, 6);
+  text(ctx, tag, W / 2, 374, 46, S.pillText, null, 0);
+  // the words: huge, ink outline, slight tilt
+  ctx.save(); ctx.translate(W / 2, 0); ctx.rotate(-0.035);
+  cfg.words.forEach((w, i) => {
+    const size = fitWord(w, 940, i === cfg.words.length - 1 ? 210 : 150);
+    const y = 560 + i * (size * 0.98) - (cfg.words.length === 1 ? -60 : 0);
+    text(ctx, w, 0, y + 10, size, 'rgba(0,0,0,.25)', null, 0);
+    text(ctx, w, 0, y, size, S.word, INK, size * 0.16);
+    text(ctx, w, 0, y, size, S.word, null, 0);
+  });
+  ctx.restore();
+  if (cfg.guide) { ctx.strokeStyle = 'rgba(255,255,255,.6)'; ctx.setLineDash([20, 14]); ctx.lineWidth = 4; ctx.strokeRect(2, 285, W - 4, 1350); ctx.setLineDash([]); }
+  return cv.toDataURL('image/png');
+};
+// a profile grid preview: covers cropped to 4:5 like Instagram, three in a row
+window.renderGrid = async ({ items }) => {
+  cv.width = 3 * 360 + 4 * 12; cv.height = Math.ceil(items.length / 3) * 450 + (Math.ceil(items.length / 3) + 1) * 12;
+  ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
+  for (let i = 0; i < items.length; i++) {
+    const img = await load(items[i]), x = 12 + (i % 3) * 372, y = 12 + Math.floor(i / 3) * 462;
+    ctx.drawImage(img, 0, 285, 1080, 1350, x, y, 360, 450);
+  }
+  const url = cv.toDataURL('image/jpeg', 0.9); cv.width = 1080; cv.height = 1920; return url;
+};
+document.fonts.load('700 40px Poppins').then(() => { window.coverReady = true; });
+</script></body></html>

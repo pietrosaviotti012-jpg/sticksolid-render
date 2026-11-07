@@ -1,0 +1,486 @@
+[
+ {
+  "page": "man",
+  "out": "out/temi/solid-giorno.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#ff9a62",
+     "#ffc79a",
+     "#ffe9d6"
+    ],
+    "key": [
+     "#fff1e0",
+     2.5
+    ],
+    "rim": [
+     "#ffffff",
+     1.4
+    ],
+    "hemi": [
+     "#fff4ea",
+     "#d9b49a",
+     0.9
+    ],
+    "exposure": 1.05
+   },
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-notte.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#0f0e2a",
+     "#2b2350",
+     "#4a3b7a"
+    ],
+    "key": [
+     "#9fb4ff",
+     1.7
+    ],
+    "rim": [
+     "#ffd27a",
+     1.9
+    ],
+    "hemi": [
+     "#6f7cc7",
+     "#1a1830",
+     0.6
+    ],
+    "exposure": 0.95,
+    "fog": [
+     "#2b2350",
+     6,
+     18
+    ]
+   },
+   "face": {
+    "brow": 0.4,
+    "tilt": 0.3,
+    "lid": 0.5,
+    "mouth": "flat",
+    "one": -1,
+    "look": [
+     -0.8,
+     -0.8
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-cupo.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#140a0c",
+     "#3b1418",
+     "#64262a"
+    ],
+    "key": [
+     "#ffb0a0",
+     1.3
+    ],
+    "rim": [
+     "#ff3b3b",
+     2.4
+    ],
+    "hemi": [
+     "#7a3a3a",
+     "#120808",
+     0.5
+    ],
+    "exposure": 0.9,
+    "fog": [
+     "#3b1418",
+     5,
+     14
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 1.6,
+    "lid": 1,
+    "open": 0.3,
+    "look": [
+     -0.6,
+     0
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-triste.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#5b6676",
+     "#8f9aa8",
+     "#cfd5dc"
+    ],
+    "key": [
+     "#e3e8f0",
+     1.6
+    ],
+    "rim": [
+     "#c8d2e0",
+     1
+    ],
+    "hemi": [
+     "#aeb7c4",
+     "#5a5f66",
+     0.8
+    ],
+    "exposure": 0.95,
+    "fog": [
+     "#8f9aa8",
+     7,
+     20
+    ]
+   },
+   "face": {
+    "brow": 0.2,
+    "tilt": 1.7,
+    "lid": -0.2,
+    "mouth": "frown",
+    "look": [
+     0,
+     0.7
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-allegro.png",
+  "cfg": {
+   "pose": "cheer",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#ffb938",
+     "#ffd77a",
+     "#fff1cc"
+    ],
+    "key": [
+     "#fff6e0",
+     2.7
+    ],
+    "rim": [
+     "#ffffff",
+     1.6
+    ],
+    "hemi": [
+     "#fff8e6",
+     "#e0c27a",
+     1
+    ],
+    "exposure": 1.08
+   },
+   "face": {
+    "brow": 0.9,
+    "tilt": 0.8,
+    "lid": 0.15,
+    "mouth": "smile",
+    "grin": 1.2,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-spazio.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#04050d",
+     "#0f1838",
+     "#26306a"
+    ],
+    "key": [
+     "#ffffff",
+     2.2
+    ],
+    "rim": [
+     "#5ff3ff",
+     2.2
+    ],
+    "hemi": [
+     "#5a6bb0",
+     "#05060f",
+     0.5
+    ],
+    "exposure": 1
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-fuoco.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#b8301a",
+     "#ff7a3d",
+     "#ffd08a"
+    ],
+    "key": [
+     "#ffd2a0",
+     2.6
+    ],
+    "rim": [
+     "#ff5a1f",
+     2.2
+    ],
+    "hemi": [
+     "#ffb070",
+     "#7a3010",
+     0.8
+    ],
+    "exposure": 1,
+    "fog": [
+     "#ff7a3d",
+     8,
+     22
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-freddo.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#6fcfff",
+     "#c4ecff",
+     "#f2fbff"
+    ],
+    "key": [
+     "#eaf6ff",
+     2.2
+    ],
+    "rim": [
+     "#bfe9ff",
+     1.6
+    ],
+    "hemi": [
+     "#e8f6ff",
+     "#9fc2d6",
+     1
+    ],
+    "exposure": 1.02
+   },
+   "face": {
+    "brow": 0.4,
+    "tilt": 1.5,
+    "lid": 0.7,
+    "mouth": "flat",
+    "look": [
+     0,
+     0.3
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/temi/solid-antico.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 17,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.32,
+    0
+   ],
+   "turn": -0.15,
+   "theme": {
+    "sky": [
+     "#b98c4f",
+     "#e3c48e",
+     "#f5e6c4"
+    ],
+    "key": [
+     "#ffe1b0",
+     2.3
+    ],
+    "rim": [
+     "#fff0d0",
+     1.3
+    ],
+    "hemi": [
+     "#f5e6c4",
+     "#8a6a3a",
+     0.9
+    ],
+    "exposure": 1
+   },
+   "face": {
+    "brow": 0.4,
+    "tilt": 0.3,
+    "lid": 0.5,
+    "mouth": "flat",
+    "one": -1,
+    "look": [
+     -0.8,
+     -0.8
+    ],
+    "eyes": 1.35
+   }
+  }
+ }
+]

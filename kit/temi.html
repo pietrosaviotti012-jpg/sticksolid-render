@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>temi di colore</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="2280" height="2520"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script><script src="lib/temi-stick.js"></script>
+<script>
+// window.renderTemi() -> JPEG: the nine colour themes, each with Stick's 2D scene and Solid's 3D scene side by side.
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+window.renderTemi = async () => {
+  const T = await (await fetch('temi.json?' + Date.now())).json(); delete T._;
+  const E = await (await fetch('espressioni.json?' + Date.now())).json();
+  const FACE = await (await fetch('temi-facce.json?' + Date.now())).json();
+  ctx.fillStyle = '#faf6ee'; ctx.fillRect(0, 0, cv.width, cv.height);
+  text(ctx, 'StickSolid', 70, 85, 92, INK, null, 0, 'Poppins', 700, 'left');
+  text(ctx, 'temi di colore: uno per ogni umore della storia', 70, 160, 42, '#6b6370', null, 0, 'Poppins', 700, 'left');
+  const keys = Object.keys(T);
+  for (let i = 0; i < keys.length; i++) {
+    const k = keys[i], th = T[k], cx = 60 + (i % 3) * 740, cy = 220 + Math.floor(i / 3) * 760, cw = 700, ch = 600;
+    // Stick's half
+    ctx.save(); rrect(ctx, cx, cy, cw, ch, 28); ctx.clip();
+    const half = cw / 2, gy = cy + 470;
+    // the light sits behind Stick's chest and is wide enough to light his arms and legs too
+    drawThemeBack(ctx, th.stick, cx, cy, half, ch, gy, [cx + half / 2, cy + 260, 120]);
+    const e = E[FACE[k]].stick;
+    drawStick(ctx, { hat: 'none', belt: false, cols: ['#e0392f', '#e0392f'], legW: 2.2, armW: 1.4, x: cx + half / 2, y: gy + 10, s: 330, ...e, face: e.face, shadow: true });
+    drawThemeFront(ctx, th.stick, cx, cy, half, ch, 0.4);
+    // Solid's half
+    const img = await load(`out/temi/solid-${k}.png`);
+    ctx.drawImage(img, 400, 0, 800, 1370, cx + half, cy, half, ch);
+    ctx.restore();
+    // caption sample with the theme's key colour
+    const kw = 'black'; text(ctx, 'went ' + kw, cx + cw / 2, cy + ch - 55, 0, '#fff', null, 0);
+    ctx.save(); ctx.font = '700 46px Poppins'; const w1 = ctx.measureText('went ').width, w2 = ctx.measureText(kw).width, sx = cx + cw / 2 - (w1 + w2) / 2;
+    text(ctx, 'went', sx + ctx.measureText('went').width / 2, cy + ch - 55, 46, '#fff', INK, 9); text(ctx, 'went', sx + ctx.measureText('went').width / 2, cy + ch - 55, 46, '#fff', null, 0);
+    text(ctx, kw, sx + w1 + w2 / 2, cy + ch - 55, 46, th.chiave, INK, 9); text(ctx, kw, sx + w1 + w2 / 2, cy + ch - 55, 46, th.chiave, null, 0); ctx.restore();
+    text(ctx, th.nome, cx + 10, cy + ch + 48, 42, INK, null, 0, 'Poppins', 700, 'left');
+    text(ctx, th.umore, cx + 10, cy + ch + 98, 26, '#6b6370', null, 0, 'Poppins', 700, 'left');
+  }
+  return cv.toDataURL('image/jpeg', 0.9);
+};
+document.fonts.load('700 40px Poppins').then(() => { window.temiReady = true; });
+</script></body></html>

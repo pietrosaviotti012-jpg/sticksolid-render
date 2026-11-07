@@ -1,0 +1,177 @@
+[
+ {
+  "page": "man",
+  "out": "out/cieli/blu-skill.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 16,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.35,
+    0
+   ],
+   "turn": -0.2,
+   "theme": {
+    "sky": [
+     "#2b78d6",
+     "#5b9fea",
+     "#a9cdf1"
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/cieli/pesca.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 16,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.35,
+    0
+   ],
+   "turn": -0.2,
+   "theme": {
+    "sky": [
+     "#ff9a62",
+     "#ffc79a",
+     "#ffe9d6"
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/cieli/turchese.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 16,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.35,
+    0
+   ],
+   "turn": -0.2,
+   "theme": {
+    "sky": [
+     "#3fc7b5",
+     "#9fe6da",
+     "#e3f8f4"
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/cieli/crema.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 16,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.35,
+    0
+   ],
+   "turn": -0.2,
+   "theme": {
+    "sky": [
+     "#ffb938",
+     "#ffd77a",
+     "#fff1cc"
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/cieli/lilla.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": true,
+   "shirt": "#2f63c9",
+   "fov": 16,
+   "camPos": [
+    0,
+    1.45,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.35,
+    0
+   ],
+   "turn": -0.2,
+   "theme": {
+    "sky": [
+     "#8f7cf0",
+     "#c2b8ff",
+     "#ece8ff"
+    ]
+   },
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ }
+]

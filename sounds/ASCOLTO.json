@@ -1,0 +1,1234 @@
+{
+ "wind/1.ogg": {
+  "family": "wind",
+  "want": "wind blowing at night",
+  "z": 2.5,
+  "verdict": "plausible",
+  "real": "uncertain",
+  "p_real": 0.421
+ },
+ "wind/2.ogg": {
+  "family": "wind",
+  "want": "wind blowing at night",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.897
+ },
+ "wind/3.ogg": {
+  "family": "wind",
+  "want": "wind blowing at night",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.81
+ },
+ "rain/1.ogg": {
+  "family": "rain",
+  "want": "rain falling",
+  "z": 3.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.84
+ },
+ "rain/2.ogg": {
+  "family": "rain",
+  "want": "rain falling",
+  "z": 3.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.934
+ },
+ "rain/3.ogg": {
+  "family": "rain",
+  "want": "rain falling",
+  "z": 3.8,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.887
+ },
+ "thunder/1.ogg": {
+  "family": "thunder",
+  "want": "thunder rumbling in a storm",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.924
+ },
+ "thunder/2.ogg": {
+  "family": "thunder",
+  "want": "thunder rumbling in a storm",
+  "z": 4.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.959
+ },
+ "thunder/3.ogg": {
+  "family": "thunder",
+  "want": "thunder rumbling in a storm",
+  "z": 2.5,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.822
+ },
+ "waves/1.ogg": {
+  "family": "waves",
+  "want": "sea waves on the shore",
+  "z": 2.7,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.837
+ },
+ "waves/2.ogg": {
+  "family": "waves",
+  "want": "sea waves on the shore",
+  "z": 3.7,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.926
+ },
+ "steps/1.ogg": {
+  "family": "steps",
+  "want": "footsteps walking",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.844
+ },
+ "steps/2.ogg": {
+  "family": "steps",
+  "want": "footsteps walking",
+  "z": 3.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.965
+ },
+ "steps/3.ogg": {
+  "family": "steps",
+  "want": "footsteps walking",
+  "z": 1.05,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.992
+ },
+ "floor-creak/1.ogg": {
+  "family": "floor-creak",
+  "want": "a creaking wooden floor",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.963
+ },
+ "floor-creak/2.ogg": {
+  "family": "floor-creak",
+  "want": "a creaking wooden floor",
+  "z": 1.06,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.993
+ },
+ "floor-creak/3.ogg": {
+  "family": "floor-creak",
+  "want": "a creaking wooden floor",
+  "z": 4.5,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.974
+ },
+ "door-creak/1.ogg": {
+  "family": "door-creak",
+  "want": "a creaking door opening",
+  "z": 4.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.958
+ },
+ "door-creak/2.ogg": {
+  "family": "door-creak",
+  "want": "a creaking door opening",
+  "z": 4.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.982
+ },
+ "door-creak/3.ogg": {
+  "family": "door-creak",
+  "want": "a creaking door opening",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.991
+ },
+ "door-creak/4.ogg": {
+  "family": "door-creak",
+  "want": "a creaking door opening",
+  "z": 3.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.967
+ },
+ "door-metal/1.ogg": {
+  "family": "door-metal",
+  "want": "a heavy metal door or gate",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.991
+ },
+ "door-metal/2.ogg": {
+  "family": "door-metal",
+  "want": "a heavy metal door or gate",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.991
+ },
+ "door-metal/3.ogg": {
+  "family": "door-metal",
+  "want": "a heavy metal door or gate",
+  "z": 3.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.97
+ },
+ "door-metal/4.ogg": {
+  "family": "door-metal",
+  "want": "a heavy metal door or gate",
+  "z": 3.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.922
+ },
+ "door-slide/1.ogg": {
+  "family": "door-slide",
+  "want": "a sliding door",
+  "z": 4.8,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.967
+ },
+ "door-slide/2.ogg": {
+  "family": "door-slide",
+  "want": "a sliding door",
+  "z": 4.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.945
+ },
+ "door-slide/3.ogg": {
+  "family": "door-slide",
+  "want": "a sliding door",
+  "z": 3.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.94
+ },
+ "knock/1.ogg": {
+  "family": "knock",
+  "want": "knocking on a wooden door",
+  "z": 4.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.974
+ },
+ "knock/2.ogg": {
+  "family": "knock",
+  "want": "knocking on a wooden door",
+  "z": 4.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.969
+ },
+ "knock/3.ogg": {
+  "family": "knock",
+  "want": "knocking on a wooden door",
+  "z": 1.21,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.991
+ },
+ "knock/4.ogg": {
+  "family": "knock",
+  "want": "knocking on a wooden door",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.99
+ },
+ "clock/1.ogg": {
+  "family": "clock",
+  "want": "a clock ticking",
+  "z": 3.7,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.95
+ },
+ "clock/2.ogg": {
+  "family": "clock",
+  "want": "a clock ticking",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.809
+ },
+ "clock/3.ogg": {
+  "family": "clock",
+  "want": "a clock ticking",
+  "z": 3.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.863
+ },
+ "clock/4.ogg": {
+  "family": "clock",
+  "want": "a clock ticking",
+  "z": 2.6,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.968
+ },
+ "clock/5.ogg": {
+  "family": "clock",
+  "want": "a clock ticking",
+  "z": 1.74,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.936
+ },
+ "elevator/1.ogg": {
+  "family": "elevator",
+  "want": "an elevator moving",
+  "z": 5.8,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.921
+ },
+ "elevator/2.ogg": {
+  "family": "elevator",
+  "want": "an elevator moving",
+  "z": 1.8,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.961
+ },
+ "typing/1.ogg": {
+  "family": "typing",
+  "want": "typing on a keyboard",
+  "z": 5.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.987
+ },
+ "typing/2.ogg": {
+  "family": "typing",
+  "want": "typing on a keyboard",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.934
+ },
+ "typing/3.ogg": {
+  "family": "typing",
+  "want": "typing on a keyboard",
+  "z": 5.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.991
+ },
+ "phone-ring/1.ogg": {
+  "family": "phone-ring",
+  "want": "a telephone ringing",
+  "z": 1.86,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.918
+ },
+ "phone-dial/1.ogg": {
+  "family": "phone-dial",
+  "want": "telephone dial tones",
+  "z": 4.9,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.57
+ },
+ "phone-dial/2.ogg": {
+  "family": "phone-dial",
+  "want": "telephone dial tones",
+  "z": 4.6,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.532
+ },
+ "phone-dial/3.ogg": {
+  "family": "phone-dial",
+  "want": "telephone dial tones",
+  "z": 1.59,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.849
+ },
+ "phone-dead/1.ogg": {
+  "family": "phone-dead",
+  "want": "a telephone busy signal",
+  "z": 4.2,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.123
+ },
+ "phone-dead/2.ogg": {
+  "family": "phone-dead",
+  "want": "a telephone busy signal",
+  "z": 2.8,
+  "verdict": "plausible",
+  "real": "likely code-synthesized",
+  "p_real": 0.041
+ },
+ "phone-dead/3.ogg": {
+  "family": "phone-dead",
+  "want": "a telephone busy signal",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "likely code-synthesized",
+  "p_real": 0.043
+ },
+ "modem/1.ogg": {
+  "family": "modem",
+  "want": "a dial-up modem",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.694
+ },
+ "modem/2.ogg": {
+  "family": "modem",
+  "want": "a dial-up modem",
+  "z": 4.2,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.53
+ },
+ "static/1.ogg": {
+  "family": "static",
+  "want": "radio static noise",
+  "z": 2.8,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.867
+ },
+ "static/2.ogg": {
+  "family": "static",
+  "want": "radio static noise",
+  "z": -0.36,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.913
+ },
+ "static/3.ogg": {
+  "family": "static",
+  "want": "radio static noise",
+  "z": -0.1,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.788
+ },
+ "radio/1.ogg": {
+  "family": "radio",
+  "want": "a strange radio signal",
+  "z": 1.62,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.413
+ },
+ "radio/2.ogg": {
+  "family": "radio",
+  "want": "a strange radio signal",
+  "z": 2.7,
+  "verdict": "plausible",
+  "real": "uncertain",
+  "p_real": 0.545
+ },
+ "radio/3.ogg": {
+  "family": "radio",
+  "want": "a strange radio signal",
+  "z": 2.4,
+  "verdict": "weak",
+  "real": "uncertain",
+  "p_real": 0.726
+ },
+ "radio/4.ogg": {
+  "family": "radio",
+  "want": "a strange radio signal",
+  "z": 2.2,
+  "verdict": "weak",
+  "real": "likely code-synthesized",
+  "p_real": 0.117
+ },
+ "morse/1.ogg": {
+  "family": "morse",
+  "want": "morse code beeps",
+  "z": 3.5,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.063
+ },
+ "morse/2.ogg": {
+  "family": "morse",
+  "want": "morse code beeps",
+  "z": 3.8,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.073
+ },
+ "alarm/1.ogg": {
+  "family": "alarm",
+  "want": "a loud alarm",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.232
+ },
+ "alarm/2.ogg": {
+  "family": "alarm",
+  "want": "a loud alarm",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.936
+ },
+ "alarm/3.ogg": {
+  "family": "alarm",
+  "want": "a loud alarm",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.078
+ },
+ "alarm/4.ogg": {
+  "family": "alarm",
+  "want": "a loud alarm",
+  "z": 3.7,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.468
+ },
+ "alarm-home/1.ogg": {
+  "family": "alarm-home",
+  "want": "a smoke alarm beeping",
+  "z": 4.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.802
+ },
+ "alarm-home/2.ogg": {
+  "family": "alarm-home",
+  "want": "a smoke alarm beeping",
+  "z": 2.1,
+  "verdict": "weak",
+  "real": "likely code-synthesized",
+  "p_real": 0.05
+ },
+ "alarm-home/3.ogg": {
+  "family": "alarm-home",
+  "want": "a smoke alarm beeping",
+  "z": 0.99,
+  "verdict": "no match",
+  "real": "likely code-synthesized",
+  "p_real": 0.024
+ },
+ "siren/1.ogg": {
+  "family": "siren",
+  "want": "a siren wailing",
+  "z": 5.0,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.7
+ },
+ "siren/2.ogg": {
+  "family": "siren",
+  "want": "a siren wailing",
+  "z": 4.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.868
+ },
+ "siren/3.ogg": {
+  "family": "siren",
+  "want": "a siren wailing",
+  "z": 4.9,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.751
+ },
+ "siren/4.ogg": {
+  "family": "siren",
+  "want": "a siren wailing",
+  "z": 4.6,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.584
+ },
+ "monitor/1.ogg": {
+  "family": "monitor",
+  "want": "an electronic beep",
+  "z": 3.6,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.175
+ },
+ "monitor/2.ogg": {
+  "family": "monitor",
+  "want": "an electronic beep",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.555
+ },
+ "breath/1.ogg": {
+  "family": "breath",
+  "want": "heavy breathing",
+  "z": 5.34,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.975
+ },
+ "breath/2.ogg": {
+  "family": "breath",
+  "want": "heavy breathing",
+  "z": 5.44,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.943
+ },
+ "whisper/1.ogg": {
+  "family": "whisper",
+  "want": "a person whispering",
+  "z": 2.84,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.959
+ },
+ "raven/2.ogg": {
+  "family": "raven",
+  "want": "a raven or crow cawing",
+  "z": 4.6,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.954
+ },
+ "raven/3.ogg": {
+  "family": "raven",
+  "want": "a raven or crow cawing",
+  "z": 4.8,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.985
+ },
+ "raven/4.ogg": {
+  "family": "raven",
+  "want": "a raven or crow cawing",
+  "z": 5.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.984
+ },
+ "wolf/1.ogg": {
+  "family": "wolf",
+  "want": "a wolf howling",
+  "z": 5.5,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.967
+ },
+ "dog/1.ogg": {
+  "family": "dog",
+  "want": "a dog barking",
+  "z": 1.52,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.974
+ },
+ "cat/1.ogg": {
+  "family": "cat",
+  "want": "a cat meowing",
+  "z": 6.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.854
+ },
+ "cat/2.ogg": {
+  "family": "cat",
+  "want": "a cat meowing",
+  "z": 5.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.86
+ },
+ "horses/1.ogg": {
+  "family": "horses",
+  "want": "horses galloping",
+  "z": 3.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.977
+ },
+ "whale/1.ogg": {
+  "family": "whale",
+  "want": "whale song underwater",
+  "z": 1.98,
+  "verdict": "no match",
+  "real": "likely code-synthesized",
+  "p_real": 0.181
+ },
+ "whale/2.ogg": {
+  "family": "whale",
+  "want": "whale song underwater",
+  "z": 1.87,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.912
+ },
+ "whale/3.ogg": {
+  "family": "whale",
+  "want": "whale song underwater",
+  "z": 0.7,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.924
+ },
+ "whale/4.ogg": {
+  "family": "whale",
+  "want": "whale song underwater",
+  "z": 3.6,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.201
+ },
+ "creature/1.ogg": {
+  "family": "creature",
+  "want": "a monster growling",
+  "z": 3.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.863
+ },
+ "creature/2.ogg": {
+  "family": "creature",
+  "want": "a monster growling",
+  "z": 1.11,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.992
+ },
+ "creature/3.ogg": {
+  "family": "creature",
+  "want": "a monster growling",
+  "z": 1.23,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.969
+ },
+ "creature/4.ogg": {
+  "family": "creature",
+  "want": "a monster growling",
+  "z": 0.89,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.989
+ },
+ "space/1.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 3.4,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.366
+ },
+ "space/2.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 3.1,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.136
+ },
+ "space/3.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 0.73,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.619
+ },
+ "space/4.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 1.58,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.483
+ },
+ "space/5.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 3.6,
+  "verdict": "strong",
+  "real": "likely code-synthesized",
+  "p_real": 0.345
+ },
+ "space/6.ogg": {
+  "family": "space",
+  "want": "eerie electronic space sounds",
+  "z": 2.2,
+  "verdict": "weak",
+  "real": "likely code-synthesized",
+  "p_real": 0.351
+ },
+ "mars-wind/1.ogg": {
+  "family": "mars-wind",
+  "want": "wind on another planet",
+  "z": 2.1,
+  "verdict": "weak",
+  "real": "uncertain",
+  "p_real": 0.765
+ },
+ "cosmic-hit/1.ogg": {
+  "family": "cosmic-hit",
+  "want": "a deep impact",
+  "z": 0.36,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.789
+ },
+ "cosmic-hit/2.ogg": {
+  "family": "cosmic-hit",
+  "want": "a deep impact",
+  "z": 0.93,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.731
+ },
+ "cosmic-hit/3.ogg": {
+  "family": "cosmic-hit",
+  "want": "a deep impact",
+  "z": -1.33,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.564
+ },
+ "rumble/1.ogg": {
+  "family": "rumble",
+  "want": "a deep earth rumble",
+  "z": 4.4,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.624
+ },
+ "rumble/2.ogg": {
+  "family": "rumble",
+  "want": "a deep earth rumble",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.664
+ },
+ "crowd/2.ogg": {
+  "family": "crowd",
+  "want": "a crowd of people talking",
+  "z": 2.24,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.895
+ },
+ "crowd/3.ogg": {
+  "family": "crowd",
+  "want": "a crowd of people talking",
+  "z": 2.71,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.849
+ },
+ "crowd/4.ogg": {
+  "family": "crowd",
+  "want": "a crowd of people talking",
+  "z": 2.41,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.863
+ },
+ "crowd/5.ogg": {
+  "family": "crowd",
+  "want": "a crowd of people talking",
+  "z": 3.11,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.634
+ },
+ "bell/1.ogg": {
+  "family": "bell",
+  "want": "a bell ringing",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.918
+ },
+ "bell/2.ogg": {
+  "family": "bell",
+  "want": "a bell ringing",
+  "z": 3.9,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.937
+ },
+ "bell/3.ogg": {
+  "family": "bell",
+  "want": "a bell ringing",
+  "z": 2.3,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.94
+ },
+ "bell/4.ogg": {
+  "family": "bell",
+  "want": "a bell ringing",
+  "z": 2.0,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.923
+ },
+ "foghorn/1.ogg": {
+  "family": "foghorn",
+  "want": "a foghorn",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.836
+ },
+ "foghorn/2.ogg": {
+  "family": "foghorn",
+  "want": "a foghorn",
+  "z": 5.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.862
+ },
+ "foghorn/3.ogg": {
+  "family": "foghorn",
+  "want": "a foghorn",
+  "z": 5.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.788
+ },
+ "glass/1.ogg": {
+  "family": "glass",
+  "want": "glass breaking",
+  "z": 5.6,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.998
+ },
+ "glass/2.ogg": {
+  "family": "glass",
+  "want": "glass breaking",
+  "z": 3.6,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.984
+ },
+ "fire/1.ogg": {
+  "family": "fire",
+  "want": "a fire crackling",
+  "z": 1.55,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.983
+ },
+ "fire/2.ogg": {
+  "family": "fire",
+  "want": "a fire crackling",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.965
+ },
+ "water/1.ogg": {
+  "family": "water",
+  "want": "water flowing",
+  "z": 4.6,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.918
+ },
+ "water/2.ogg": {
+  "family": "water",
+  "want": "water flowing",
+  "z": 3.7,
+  "verdict": "strong",
+  "real": "uncertain",
+  "p_real": 0.755
+ },
+ "water/3.ogg": {
+  "family": "water",
+  "want": "water flowing",
+  "z": 4.4,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.95
+ },
+ "water/4.ogg": {
+  "family": "water",
+  "want": "water flowing",
+  "z": 4.2,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.974
+ },
+ "train/1.ogg": {
+  "family": "train",
+  "want": "a train moving",
+  "z": 2.8,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.881
+ },
+ "car/1.ogg": {
+  "family": "car",
+  "want": "a car",
+  "z": 1.06,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.996
+ },
+ "car/2.ogg": {
+  "family": "car",
+  "want": "a car",
+  "z": 0.5,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.987
+ },
+ "car/3.ogg": {
+  "family": "car",
+  "want": "a car",
+  "z": 2.9,
+  "verdict": "plausible",
+  "real": "real or pro-produced",
+  "p_real": 0.955
+ },
+ "car/4.ogg": {
+  "family": "car",
+  "want": "a car",
+  "z": 1.54,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.956
+ },
+ "boom/1.ogg": {
+  "family": "boom",
+  "want": "an explosion",
+  "z": 4.3,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.98
+ },
+ "boom/2.ogg": {
+  "family": "boom",
+  "want": "an explosion",
+  "z": 3.6,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.959
+ },
+ "boom/3.ogg": {
+  "family": "boom",
+  "want": "an explosion",
+  "z": 4.1,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.913
+ },
+ "page/1.ogg": {
+  "family": "page",
+  "want": "turning a book page",
+  "z": 2.4,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.974
+ },
+ "page/2.ogg": {
+  "family": "page",
+  "want": "turning a book page",
+  "z": 4.0,
+  "verdict": "strong",
+  "real": "real or pro-produced",
+  "p_real": 0.98
+ },
+ "page/3.ogg": {
+  "family": "page",
+  "want": "turning a book page",
+  "z": 0.77,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.896
+ },
+ "page/4.ogg": {
+  "family": "page",
+  "want": "turning a book page",
+  "z": 0.32,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.987
+ },
+ "page/5.ogg": {
+  "family": "page",
+  "want": "turning a book page",
+  "z": 1.0,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.985
+ },
+ "chimes/1.ogg": {
+  "family": "chimes",
+  "want": "magical chimes",
+  "z": 2.0,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.859
+ },
+ "chimes/2.ogg": {
+  "family": "chimes",
+  "want": "magical chimes",
+  "z": 1.64,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.74
+ },
+ "chimes/3.ogg": {
+  "family": "chimes",
+  "want": "magical chimes",
+  "z": 1.99,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.952
+ },
+ "chimes/4.ogg": {
+  "family": "chimes",
+  "want": "magical chimes",
+  "z": 2.3,
+  "verdict": "weak",
+  "real": "real or pro-produced",
+  "p_real": 0.942
+ },
+ "forest/1.ogg": {
+  "family": "forest",
+  "want": "a forest at night with birds and insects",
+  "z": 1.42,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.637
+ },
+ "forest/2.ogg": {
+  "family": "forest",
+  "want": "a forest at night with birds and insects",
+  "z": 1.43,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.67
+ },
+ "forest/3.ogg": {
+  "family": "forest",
+  "want": "a forest at night with birds and insects",
+  "z": 1.51,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.674
+ },
+ "forest/4.ogg": {
+  "family": "forest",
+  "want": "a forest at night with birds and insects",
+  "z": 1.51,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.858
+ },
+ "cave/1.ogg": {
+  "family": "cave",
+  "want": "a dark cave with dripping water",
+  "z": 1.11,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.793
+ },
+ "cave/2.ogg": {
+  "family": "cave",
+  "want": "a dark cave with dripping water",
+  "z": 1.7,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.784
+ },
+ "cave/3.ogg": {
+  "family": "cave",
+  "want": "a dark cave with dripping water",
+  "z": 1.49,
+  "verdict": "no match",
+  "real": "likely code-synthesized",
+  "p_real": 0.285
+ },
+ "room/1.ogg": {
+  "family": "room",
+  "want": "a quiet room ambience",
+  "z": 2.0,
+  "verdict": "weak",
+  "real": "likely code-synthesized",
+  "p_real": 0.205
+ },
+ "room/2.ogg": {
+  "family": "room",
+  "want": "a quiet room ambience",
+  "z": 1.89,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.688
+ },
+ "room/3.ogg": {
+  "family": "room",
+  "want": "a quiet room ambience",
+  "z": 0.48,
+  "verdict": "no match",
+  "real": "likely code-synthesized",
+  "p_real": 0.11
+ },
+ "room/4.ogg": {
+  "family": "room",
+  "want": "a quiet room ambience",
+  "z": 0.77,
+  "verdict": "no match",
+  "real": "uncertain",
+  "p_real": 0.575
+ },
+ "dream/1.ogg": {
+  "family": "dream",
+  "want": "a dreamy strange ambience",
+  "z": 1.97,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.91
+ },
+ "dream/2.ogg": {
+  "family": "dream",
+  "want": "a dreamy strange ambience",
+  "z": -0.59,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.95
+ },
+ "dream/3.ogg": {
+  "family": "dream",
+  "want": "a dreamy strange ambience",
+  "z": 1.55,
+  "verdict": "no match",
+  "real": "real or pro-produced",
+  "p_real": 0.975
+ }
+}

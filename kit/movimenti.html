@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>movimenti</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="2000" height="1000"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script><script src="lib/moves-stick.js"></script>
+<script>
+// window.renderMosseStick({ t }) -> PNG: Stick doing the 10 ready-made moves, in a 5 x 2 grid, at time t.
+// window.renderEtichette({}) -> PNG: the same grid with only the labels (laid over Solid's grid by ffmpeg).
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const NAMES = { idle: 'fermo', walk: 'cammina', run: 'corre', jump: 'salta', wave: 'saluta', surprise: 'si spaventa', shrug: 'alza le spalle', point: 'indica', think: 'pensa', cheer: 'esulta' };
+const KEYS = Object.keys(NAMES);
+function grid(drawCell, bg) {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  if (bg) { ctx.fillStyle = bg; ctx.fillRect(0, 0, cv.width, cv.height); }
+  KEYS.forEach((k, i) => {
+    const x = (i % 5) * 400, y = Math.floor(i / 5) * 500;
+    drawCell(k, x, y);
+    text(ctx, NAMES[k], x + 200, y + 465, 36, '#fff', INK, 9);
+  });
+}
+window.renderMosseStick = ({ t = 0 }) => {
+  grid((k, x, y) => {
+    // the moves that play once restart every 2 s so the loop shows them
+    const tt = ['jump', 'surprise', 'point'].includes(k) ? t % 2 : t;
+    drawStickMove(ctx, k, tt, { hat: 'none', belt: false, cols: ['#e0392f', '#e0392f'], legW: 2.2, armW: 1.4, x: x + 200, y: y + 410, s: 320 });
+  }, '#fdf0d5');
+  return cv.toDataURL('image/png');
+};
+window.renderEtichette = () => { grid(() => {}, null); return cv.toDataURL('image/png'); };
+document.fonts.load('700 40px Poppins').then(() => { window.movimentiReady = true; });
+</script></body></html>

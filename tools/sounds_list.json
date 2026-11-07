@@ -1,0 +1,492 @@
+{
+ "wind": {
+  "kind": "bed",
+  "items": [
+   "c:Howling wind.ogg",
+   {
+    "s": "c:Killiney Hill Storm Floris 20250804 1537.ogg",
+    "start": 5
+   },
+   "a:amb/storm1.mp3"
+  ]
+ },
+ "rain": {
+  "kind": "bed",
+  "items": [
+   "c:Rain against the window.ogg",
+   "c:Rain (1).ogg",
+   "c:Rain on a veranda and t.ogg"
+  ]
+ },
+ "thunder": {
+  "kind": "bed",
+  "items": [
+   "c:Thunder and rain on a v.ogg",
+   "c:Rain and thunder.ogg",
+   "a:amb/storm2.mp3"
+  ]
+ },
+ "waves": {
+  "kind": "bed",
+  "items": [
+   "a:amb/sea.mp3",
+   "a:amb/boat.mp3",
+   {
+    "s": "c:North Point Lighthouse.ogg",
+    "skip": "contiene una voce parlata"
+   }
+  ]
+ },
+ "steps": {
+  "kind": "oneshot",
+  "items": [
+   "c:Church people walking steps with reverb.ogg",
+   "c:Forest track 3.ogg",
+   "a:general/bottom-attanuk-stairs.mp3"
+  ]
+ },
+ "floor-creak": {
+  "kind": "oneshot",
+  "items": [
+   "a:various/creaking-floor.mp3",
+   "c:Creaky wooden swivel chair.ogg",
+   "c:Creaky wooden casket.ogg"
+  ]
+ },
+ "door-creak": {
+  "kind": "oneshot",
+  "items": [
+   "c:Squeaky door.ogg",
+   "c:Squeaky door hinge.ogg",
+   "c:Door handle creaking.ogg",
+   "a:general/cemetary-gate.mp3"
+  ]
+ },
+ "door-metal": {
+  "kind": "oneshot",
+  "items": [
+   "c:Rusty metal door clasp.ogg",
+   "c:Springlocked cellar door.ogg",
+   "c:Metal cabinet door jarring.ogg",
+   "a:general/hall-gate.mp3"
+  ]
+ },
+ "door-slide": {
+  "kind": "oneshot",
+  "items": [
+   "c:Sliding door of veranda opening.ogg",
+   "c:Elevator door closing.ogg",
+   "c:Train automatic inner door opening closing 02.ogg"
+  ]
+ },
+ "knock": {
+  "kind": "oneshot",
+  "items": [
+   "c:Knock on door.wav",
+   "c:Knocking on wood or door.ogg",
+   "c:Door knocker audio.ogg",
+   "a:various/2knock.wav"
+  ]
+ },
+ "clock": {
+  "kind": "bed",
+  "items": [
+   "c:Clock ticking.ogg",
+   "c:Alarm clock ticking.ogg",
+   "c:LA2 kitchen clock.ogg",
+   "a:amb/gear-clock.mp3",
+   "a:amb/double-clock.mp3"
+  ]
+ },
+ "elevator": {
+  "kind": "bed",
+  "items": [
+   "c:Elevator ride.ogg",
+   "c:Hydraulic lift down.ogg"
+  ]
+ },
+ "typing": {
+  "kind": "oneshot",
+  "items": [
+   "c:Typing fast.ogg",
+   "c:Soft laptop keyboard-wxA-2.wav",
+   "c:Typing - Model M 1986.ogg"
+  ]
+ },
+ "phone-ring": {
+  "kind": "oneshot",
+  "items": [
+   "c:Telephone.ogg"
+  ]
+ },
+ "phone-dial": {
+  "kind": "oneshot",
+  "items": [
+   "c:DTMF dialing.ogg",
+   "c:US dial tone.ogg",
+   "c:Toy phone speed dial.ogg"
+  ]
+ },
+ "phone-dead": {
+  "kind": "oneshot",
+  "items": [
+   "c:NorthAmericanBusySignal.ogg",
+   "c:Future SIT.ogg",
+   "c:IO SIT.ogg"
+  ]
+ },
+ "modem": {
+  "kind": "oneshot",
+  "items": [
+   "c:Dial up connection (short).oga",
+   "c:Dial up modem noises.ogg"
+  ]
+ },
+ "static": {
+  "kind": "bed",
+  "items": [
+   "c:Gray noise.ogg",
+   "c:Energy noise.ogg",
+   "c:Energy barrier pad.ogg"
+  ]
+ },
+ "radio": {
+  "kind": "bed",
+  "items": [
+   "c:UVB-76.ogg",
+   "c:The Pip.ogg",
+   "c:Buzzer 2013 01 24.ogg",
+   "c:OLIVIA 500 16 sample.ogg"
+  ]
+ },
+ "morse": {
+  "kind": "oneshot",
+  "items": [
+   "c:SOS morse code.ogg",
+   "c:Morse code.ogg"
+  ]
+ },
+ "alarm": {
+  "kind": "oneshot",
+  "items": [
+   "c:Alarm - Collision.ogg",
+   "c:Alarm - Diving - H8.ogg",
+   "c:Alarm - Missile Emerg.ogg",
+   "c:Surface ship - Collision Alarm - USS San Diego (AFS-6) - AN-SIA-114B.ogg"
+  ]
+ },
+ "alarm-home": {
+  "kind": "oneshot",
+  "items": [
+   "c:Smoke alarm.ogg",
+   "c:NFPA Fire Alarm.ogg",
+   "c:Alarm or siren.ogg"
+  ]
+ },
+ "siren": {
+  "kind": "bed",
+  "items": [
+   "c:Civil-defense-siren-waver.ogg",
+   "c:Civil-defense-siren-constant.ogg",
+   "c:American police siren i.ogg",
+   "c:Motorsirene - Feuerwehralarm.ogg"
+  ]
+ },
+ "monitor": {
+  "kind": "oneshot",
+  "items": [
+   "c:Heart Monitor Beep--freesound.org.oga",
+   "c:Sputnik beep.ogg"
+  ]
+ },
+ "breath": {
+  "kind": "oneshot",
+  "items": [
+   "c:Breathing man.ogg",
+   "c:Heavy breathing 3.ogg"
+  ]
+ },
+ "whisper": {
+  "kind": "oneshot",
+  "items": [
+   "c:Whispering-example.ogg"
+  ]
+ },
+ "raven": {
+  "kind": "oneshot",
+  "items": [
+   {
+    "s": "c:Common Raven.ogg",
+    "skip": "contiene una voce parlata"
+   },
+   "c:Common Raven Grand Teton National Park.ogg",
+   "c:Yellowstone sound library - Common Raven - 001.mp3",
+   "a:general/crow.mp3"
+  ]
+ },
+ "wolf": {
+  "kind": "oneshot",
+  "items": [
+   "c:Wolf howls.ogg"
+  ]
+ },
+ "dog": {
+  "kind": "oneshot",
+  "items": [
+   "a:general/dog.mp3"
+  ]
+ },
+ "cat": {
+  "kind": "oneshot",
+  "items": [
+   "c:Meow of a pleading cat.oga",
+   "c:Meow of a Siamese cat - freemaster2.wav"
+  ]
+ },
+ "horses": {
+  "kind": "oneshot",
+  "items": [
+   "c:Six Horses Galloping By.ogg"
+  ]
+ },
+ "whale": {
+  "kind": "bed",
+  "items": [
+   "c:Blue Whale NE Pacific.ogg",
+   "c:Humpback whale moo.ogg",
+   "c:Sperm Whale Slow Clicks.ogg",
+   "c:Blue Whale South Pacific.ogg"
+  ]
+ },
+ "creature": {
+  "kind": "oneshot",
+  "items": [
+   "a:various/groan.mp3",
+   "a:general/forest-creature-attack.mp3",
+   "a:general/hiss-prison.mp3",
+   "c:Shrieking squeaking.ogg"
+  ]
+ },
+ "space": {
+  "kind": "bed",
+  "items": [
+   "c:Eerie Sounds of Saturn’s Radio Emissions (PIA07966).wav",
+   "c:Bizarre Sounds of Saturn’s Radio Emissions (PIA07967).wav",
+   "c:Titan haze sound.ogg",
+   "c:Titan surface sound.ogg",
+   "c:Saturn sound2.ogg",
+   "c:Spacebackground.ogg"
+  ]
+ },
+ "mars-wind": {
+  "kind": "bed",
+  "items": [
+   "c:Perseverance rover's SuperCam records wind on Mars.oga"
+  ]
+ },
+ "cosmic-hit": {
+  "kind": "oneshot",
+  "items": [
+   "c:Lightning Strikes at Saturn (PIA14310).wav",
+   "c:NASA’s InSight Records the Sound of a Martian Impact (PIA25582).wav",
+   "c:Sputnik - Beep.mp3"
+  ]
+ },
+ "rumble": {
+  "kind": "bed",
+  "items": [
+   "c:385098 morganpurkis volcano.ogg",
+   "c:Earthquake.ogg"
+  ]
+ },
+ "crowd": {
+  "kind": "bed",
+  "items": [
+   {
+    "s": "c:Flea market in the rain.ogg",
+    "skip": "contiene una voce parlata"
+   },
+   "c:Shopping mall less crowded.ogg",
+   "c:High school cafeteria.ogg",
+   "c:Douzen kids on playground.ogg",
+   "c:Indoor swimming pool hall.ogg"
+  ]
+ },
+ "bell": {
+  "kind": "oneshot",
+  "items": [
+   "c:Cloche de l'Eglise de Sainte-Marie-des-Batignolles.ogg",
+   "c:Zajeci zvony kostel 2025.ogg",
+   "c:Gong or bell vibrant (short).ogg",
+   "c:Gong55.ogg"
+  ]
+ },
+ "foghorn": {
+  "kind": "oneshot",
+  "items": [
+   "c:Original foghorn at East Brother Island Lighthouse.ogg",
+   "c:Fog signal Bremerhaven.ogg",
+   "c:Cruise ship Albatros ship horn.ogg"
+  ]
+ },
+ "glass": {
+  "kind": "oneshot",
+  "items": [
+   "a:various/break-window.mp3",
+   "c:Binging glass.ogg"
+  ]
+ },
+ "fire": {
+  "kind": "bed",
+  "items": [
+   "a:various/crackling.mp3",
+   "a:various/fire.mp3"
+  ]
+ },
+ "water": {
+  "kind": "bed",
+  "items": [
+   "c:Flowing-water-100019.ogg",
+   "c:Hemlock stream.ogg",
+   "a:amb/fountain.mp3",
+   "c:Water flowing pouring trickling.ogg"
+  ]
+ },
+ "train": {
+  "kind": "bed",
+  "items": [
+   "c:Taiwan railways EP727 train cars sounds.ogg"
+  ]
+ },
+ "car": {
+  "kind": "oneshot",
+  "items": [
+   "a:various/fiatopen.mp3",
+   "a:various/fiatclose.mp3",
+   "a:various/fiatdrive.mp3",
+   "c:Car Horn.wav"
+  ]
+ },
+ "boom": {
+  "kind": "oneshot",
+  "items": [
+   "c:Explosion 10.ogg",
+   "c:Explosion-LS100155.ogg",
+   "c:Explosions-LS100152.ogg"
+  ]
+ },
+ "page": {
+  "kind": "oneshot",
+  "items": [
+   "a:book/pg1.wav",
+   "a:book/pg7.wav",
+   "a:book/pg13.wav",
+   "a:book/book-open.wav",
+   "a:book/close-book.wav"
+  ]
+ },
+ "chimes": {
+  "kind": "oneshot",
+  "items": [
+   "a:general/chimes1.mp3",
+   "a:general/chimes2.mp3",
+   "a:general/chimes3.mp3",
+   "a:general/chimes4.mp3"
+  ]
+ },
+ "forest": {
+  "kind": "bed",
+  "items": [
+   "a:amb/forest1.mp3",
+   "a:amb/forest2.mp3",
+   "a:various/forest.mp3",
+   "a:amb/tree.mp3"
+  ]
+ },
+ "cave": {
+  "kind": "bed",
+  "items": [
+   "a:amb/mine1.mp3",
+   "a:amb/mine2.mp3",
+   "a:amb/sunk.mp3"
+  ]
+ },
+ "room": {
+  "kind": "bed",
+  "items": [
+   "a:amb/in1.mp3",
+   "a:amb/in2.mp3",
+   "a:amb/out1.mp3",
+   "a:amb/out2.mp3"
+  ]
+ },
+ "dream": {
+  "kind": "bed",
+  "items": [
+   "a:amb/dream.mp3",
+   "a:amb/heart-clock.mp3",
+   "a:amb/centipede.mp3"
+  ]
+ },
+ "m-suspense": {
+  "kind": "music",
+  "items": [
+   "m:horror/Horror Suspense.mp3",
+   "m:horror/Footsteps in the Attic.mp3",
+   "m:horror/Hidden Truth.mp3",
+   "m:horror/Asking Questions.mp3"
+  ]
+ },
+ "m-cosmic": {
+  "kind": "music",
+  "items": [
+   "m:horror/Alien Spaceship Atmosphere.mp3",
+   "m:horror/Mysterious Lights.mp3",
+   "m:horror/Alien Invasion.mp3",
+   "m:scoring/Dreams of Vain.mp3"
+  ]
+ },
+ "m-mystery": {
+  "kind": "music",
+  "items": [
+   "m:horror/Horror Mytery.mp3",
+   "m:horror/The Land of the Dead.mp3",
+   "m:scoring/After the End.mp3",
+   "m:scoring/Travelers Notebook.mp3"
+  ]
+ },
+ "m-dread": {
+  "kind": "music",
+  "items": [
+   "m:horror/Cursed Intro.mp3",
+   "m:horror/Satin Danger.mp3",
+   "m:horror/Horroriffic.mp3",
+   "m:horror/Dawn of the Apocalypse.mp3"
+  ]
+ },
+ "m-tense": {
+  "kind": "music",
+  "items": [
+   "m:horror/Mind Chaos.mp3",
+   "m:scoring/Driving Concern.mp3",
+   "m:scoring/The Drama.mp3"
+  ]
+ },
+ "m-urgent": {
+  "kind": "music",
+  "items": [
+   "m:scoring/Final Step.mp3",
+   "m:scoring/Action Strike.mp3",
+   "m:scoring/Beginning of Conflict.mp3",
+   "m:scoring/City Run.mp3"
+  ]
+ },
+ "m-tale": {
+  "kind": "music",
+  "items": [
+   "m:scoring/Magic in the Garden.mp3",
+   "m:scoring/Ice and Snow.mp3",
+   "m:scoring/Slice of Life.mp3"
+  ]
+ }
+}

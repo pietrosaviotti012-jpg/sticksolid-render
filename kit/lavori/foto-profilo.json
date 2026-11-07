@@ -1,0 +1,98 @@
+[
+ {
+  "page": "man",
+  "out": "out/parti/man-1.png",
+  "cfg": {
+   "pose": "stand",
+   "shirt": "#2f63c9",
+   "ground": false,
+   "fov": 13,
+   "camPos": [
+    0,
+    1.62,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.56,
+    0
+   ],
+   "turn": -0.25,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "smile": true,
+    "eyes": 1.35
+   },
+   "poseExtra": {
+    "head": [
+     0.06,
+     0.05,
+     -0.1
+    ]
+   }
+  }
+ },
+ {
+  "page": "compose",
+  "out": "out/foto-profilo-1c.png",
+  "cfg": {
+   "bg": "#ffc93c",
+   "guide": false,
+   "man": {
+    "src": "out/parti/man-1.png",
+    "x": 280,
+    "y": 188,
+    "w": 1600
+   },
+   "stick": {
+    "x": 450,
+    "y": 1677.82,
+    "s": 1300,
+    "cols": [
+     "#e0392f",
+     "#e0392f"
+    ],
+    "arms": {
+     "L": [
+      2.5,
+      0.5
+     ],
+     "R": [
+      0.35,
+      -0.1
+     ]
+    },
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "headTilt": 0.08,
+    "face": {
+     "eyes": "happy",
+     "mouth": "grin",
+     "look": [
+      0.3,
+      0
+     ]
+    },
+    "blush": true,
+    "headScale": 0.78,
+    "legW": 2.2,
+    "armW": 1.4
+   },
+   "zoom": 1.25,
+   "focus": [
+    740,
+    760
+   ]
+  }
+ }
+]

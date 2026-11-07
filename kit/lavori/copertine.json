@@ -1,0 +1,264 @@
+[
+ {
+  "page": "man",
+  "out": "out/copertine/solid-whoa.png",
+  "cfg": {
+   "pose": "whoa",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 13,
+   "camPos": [
+    0,
+    1.6,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.5,
+    0
+   ],
+   "turn": 0,
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/copertine/solid-paura.png",
+  "cfg": {
+   "pose": "cheer",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 12.5,
+   "camPos": [
+    0,
+    1.64,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.62,
+    0
+   ],
+   "turn": 0.1,
+   "face": {
+    "brow": 1,
+    "tilt": 1.6,
+    "lid": 1,
+    "open": 0.3,
+    "look": [
+     0,
+     -0.6
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/yourcall-1.png",
+  "cfg": {
+   "who": "stick",
+   "label": "YOUR CALL",
+   "number": 1,
+   "words": [
+    "GO",
+    "OR STAY?"
+   ],
+   "stick": {
+    "x": 540,
+    "y": 2050,
+    "s": 1250,
+    "headScale": 0.85,
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "arms": {
+     "L": [
+      1.35,
+      -1
+     ],
+     "R": [
+      1.35,
+      -1
+     ]
+    },
+    "face": {
+     "eyes": "wide",
+     "mouth": "teeth",
+     "browUp": 0.6,
+     "browAng": 0.4,
+     "look": [
+      0.5,
+      -0.3
+     ]
+    }
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/whatif-1.png",
+  "cfg": {
+   "who": "solid",
+   "label": "WHAT IF",
+   "number": 1,
+   "words": [
+    "EARTH",
+    "STOPS"
+   ],
+   "man": {
+    "src": "out/copertine/solid-whoa.png",
+    "x": -360,
+    "y": 640,
+    "w": 1800
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/truestory-1.png",
+  "cfg": {
+   "who": "stick",
+   "label": "TRUE STORY",
+   "number": 1,
+   "words": [
+    "THE DARK",
+    "DAY"
+   ],
+   "stick": {
+    "x": 540,
+    "y": 2050,
+    "s": 1250,
+    "headScale": 0.85,
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "arms": {
+     "L": [
+      2.3,
+      0.7
+     ],
+     "R": [
+      2.3,
+      0.7
+     ]
+    },
+    "face": {
+     "eyes": "wide",
+     "mouth": "o",
+     "browUp": 1,
+     "look": [
+      0,
+      -0.6
+     ]
+    }
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/whatif-2.png",
+  "cfg": {
+   "who": "solid",
+   "label": "WHAT IF",
+   "number": 2,
+   "words": [
+    "NO MORE",
+    "MOON"
+   ],
+   "man": {
+    "src": "out/copertine/solid-paura.png",
+    "x": -360,
+    "y": 560,
+    "w": 1800
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/yourcall-2.png",
+  "cfg": {
+   "who": "stick",
+   "label": "YOUR CALL",
+   "number": 2,
+   "words": [
+    "OPEN",
+    "THE DOOR?"
+   ],
+   "stick": {
+    "x": 540,
+    "y": 2050,
+    "s": 1250,
+    "headScale": 0.85,
+    "legs": {
+     "L": [
+      0.12,
+      -0.05
+     ],
+     "R": [
+      0.12,
+      -0.05
+     ]
+    },
+    "arms": {
+     "L": [
+      0.3,
+      -0.1
+     ],
+     "R": [
+      0.3,
+      -0.1
+     ]
+    },
+    "face": {
+     "eyes": "normal",
+     "mouth": "frown",
+     "browAng": 0.35,
+     "look": [
+      -0.6,
+      0
+     ]
+    }
+   }
+  }
+ },
+ {
+  "page": "cover",
+  "out": "out/copertine/whatif-3.png",
+  "cfg": {
+   "who": "solid",
+   "label": "WHAT IF",
+   "number": 3,
+   "words": [
+    "NO",
+    "GRAVITY"
+   ],
+   "man": {
+    "src": "out/copertine/solid-whoa.png",
+    "x": -360,
+    "y": 640,
+    "w": 1800
+   }
+  }
+ }
+]

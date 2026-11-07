@@ -1,0 +1,65 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>personaggi secondari</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="2400" height="3450"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script>
+<script>
+// window.renderSecondari() -> JPEG: the cast of secondary characters for both worlds, from personaggi-secondari.json
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+const GREY = '#6b6370', PAPER = '#faf6ee';
+const left = (s, x, y, size = 36, col = INK) => text(ctx, s, x, y, size, col, null, 0, 'Poppins', 700, 'left');
+function card(x, y, w, h) { rrect(ctx, x, y, w, h, 36); ctx.fillStyle = '#fff'; ctx.fill(); }
+function wrap(s, x, y, maxW, size, col) {
+  ctx.font = `700 ${size}px Poppins`; const words = s.split(' '); let line = '', yy = y;
+  for (const w of words) { const t = line ? line + ' ' + w : w; if (ctx.measureText(t).width > maxW && line) { text(ctx, line, x, yy, size, col, null, 0); line = w; yy += size * 1.25; } else line = t; }
+  if (line) text(ctx, line, x, yy, size, col, null, 0);
+}
+window.renderSecondari = async () => {
+  const C = await (await fetch('personaggi-secondari.json?' + Date.now())).json();
+  const W = cv.width; ctx.fillStyle = PAPER; ctx.fillRect(0, 0, W, cv.height);
+  left('StickSolid', 90, 100, 96); left('personaggi secondari', 90, 175, 44, GREY);
+
+  // ---- the world of Stick ----
+  let y0 = 240; card(60, y0, W - 120, 1180);
+  circle(ctx, 150, y0 + 80, 30); fillStroke(ctx, '#e0392f', 6); left('Il mondo di Stick', 200, y0 + 78, 60);
+  C.stick.forEach((c, i) => {
+    const cx = 200 + i * 250, feet = y0 + 760, o = c.o, s = 430 * (o.scale || 1);
+    if (o.sil) {
+      for (const [dx, k, col] of [[-62, .72, '#8a8396'], [62, .76, '#7b7488'], [0, .86, o.sil]]) drawStick(ctx, { hat: 'none', belt: false, legW: 2.2, armW: 1.4, sil: col, x: cx + dx, y: feet - (1 - k) * 90, s: s * k, shadow: false });
+    } else {
+      drawStick(ctx, { hat: 'none', belt: false, legW: 2.2, armW: 1.4, face: { mouth: 'smile' }, ...o, x: cx, y: feet, s });
+    }
+    text(ctx, c.nome, cx, feet + 70, 34, INK, null, 0);
+    wrap(c.ruolo, cx, feet + 120, 225, 24, GREY);
+  });
+  wrap('Stesse gambe e braccia spesse di Stick, stesse 12 espressioni, stesso contorno. Il bambino è più piccolo con la testa più grande. La folla è sempre fatta di sagome senza faccia.', W / 2, y0 + 1060, 2000, 30, INK);
+
+  // ---- the world of Solid ----
+  y0 = 1480; card(60, y0, W - 120, 1450);
+  circle(ctx, 150, y0 + 80, 30); fillStroke(ctx, '#2f63c9', 6); left('Il mondo di Solid', 200, y0 + 78, 60);
+  for (let i = 0; i < C.solid.length; i++) {
+    const c = C.solid[i], cx = 230 + i * 325;
+    const body = await load(`out/secondari/solid-${c.id}.png`);
+    ctx.drawImage(body, 480, 180, 640, 1300, cx - 150, y0 + 150, 300, 610);
+    const face = await load(`out/secondari/solid-${c.id}-faccia.png`);
+    ctx.save(); circle(ctx, cx, y0 + 900, 125); ctx.clip(); ctx.fillStyle = '#e8f0ff'; ctx.fill(); ctx.drawImage(face, cx - 160, y0 + 740, 320, 320); ctx.restore();
+    circle(ctx, cx, y0 + 900, 125); ctx.lineWidth = 4; ctx.strokeStyle = '#d6dff0'; ctx.stroke();
+    text(ctx, c.nome, cx, y0 + 1075, 34, INK, null, 0);
+    wrap(c.ruolo, cx, y0 + 1125, 290, 24, GREY);
+  }
+  wrap('Stesso corpo uniforme di Solid e stessa faccia gentile con gli occhi grandi. Donne e bambini senza barba; il bambino è alto 0,62 con la testa 1,3 volte più grande. Le armature della skill restano costumi della storia.', W / 2, y0 + 1330, 2000, 30, INK);
+
+  // ---- rules ----
+  y0 = 2990; card(60, y0, W - 120, 400);
+  left('Regole', 110, y0 + 70, 48);
+  ['Mai il rosso pieno di Stick (#e0392f) né il blu pieno di Solid (#2f63c9) sui secondari: i protagonisti si riconoscono a colpo d\'occhio.',
+   'Al massimo 3 personaggi con la faccia per scena, più la folla. Il protagonista del video è sempre il più grande o il più vicino.',
+   'Ogni secondario ha un colore fisso: se torna in un\'altra puntata, torna uguale (la vicina sempre verde, il cattivo sempre viola).',
+   'Le facce usano le stesse 12 espressioni dei protagonisti. Le voci dei secondari esistono solo nei Your call: radio, telefono, sussurro.']
+    .forEach((s, i) => left('· ' + s, 110, y0 + 140 + i * 62, 30));
+  return cv.toDataURL('image/jpeg', 0.92);
+};
+document.fonts.load('700 40px Poppins').then(() => { window.secondariReady = true; });
+</script></body></html>

@@ -1,0 +1,1917 @@
+{
+ "wind": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "wind/1.ogg",
+    "dur": 45,
+    "rms": -15.5,
+    "source": "Howling wind.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Howling_wind.ogg",
+    "license": "CC0",
+    "author": "Tvabutzku1234"
+   },
+   {
+    "file": "wind/2.ogg",
+    "dur": 45,
+    "rms": -24.6,
+    "source": "Killiney Hill Storm Floris 20250804 1537.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Killiney_Hill_Storm_Floris_20250804_1537.ogg",
+    "license": "CC0",
+    "author": "Karlunun"
+   },
+   {
+    "file": "wind/3.ogg",
+    "dur": 45,
+    "rms": -19.6,
+    "source": "amb/storm1.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "rain": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "rain/1.ogg",
+    "dur": 45,
+    "rms": -20.5,
+    "source": "Rain against the window.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Rain_against_the_window.ogg",
+    "license": "Public domain",
+    "author": "cori"
+   },
+   {
+    "file": "rain/2.ogg",
+    "dur": 44.96,
+    "rms": -18.1,
+    "source": "Rain (1).ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Rain_(1).ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   },
+   {
+    "file": "rain/3.ogg",
+    "dur": 29.99,
+    "rms": -21.9,
+    "source": "Rain on a veranda and t.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Rain_on_a_veranda_and_t.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   }
+  ]
+ },
+ "thunder": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "thunder/1.ogg",
+    "dur": 30.17,
+    "rms": -22,
+    "source": "Thunder and rain on a v.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Thunder_and_rain_on_a_v.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   },
+   {
+    "file": "thunder/2.ogg",
+    "dur": 18.9,
+    "rms": -21.4,
+    "source": "Rain and thunder.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Rain_and_thunder.ogg",
+    "license": "Public domain",
+    "author": "User:Caesar"
+   },
+   {
+    "file": "thunder/3.ogg",
+    "dur": 45,
+    "rms": -15.8,
+    "source": "amb/storm2.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "waves": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "waves/1.ogg",
+    "dur": 45,
+    "rms": -16,
+    "source": "amb/sea.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "waves/2.ogg",
+    "dur": 38.67,
+    "rms": -21.1,
+    "source": "amb/boat.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "steps": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "steps/1.ogg",
+    "dur": 11.97,
+    "rms": -19.4,
+    "source": "Church people walking steps with reverb.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Church_people_walking_steps_with_reverb.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "steps/2.ogg",
+    "dur": 5.43,
+    "rms": -23.3,
+    "source": "Forest track 3.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Forest_track_3.ogg",
+    "license": "Public domain",
+    "author": "tball74"
+   },
+   {
+    "file": "steps/3.ogg",
+    "dur": 4.56,
+    "rms": -14.3,
+    "source": "general/bottom-attanuk-stairs.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "floor-creak": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "floor-creak/1.ogg",
+    "dur": 2.58,
+    "rms": -20.5,
+    "source": "various/creaking-floor.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "floor-creak/2.ogg",
+    "dur": 5.78,
+    "rms": -20.1,
+    "source": "Creaky wooden swivel chair.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_swivel_chair.ogg",
+    "license": "Public domain",
+    "author": "chocoholic"
+   },
+   {
+    "file": "floor-creak/3.ogg",
+    "dur": 1.36,
+    "rms": -21.8,
+    "source": "Creaky wooden casket.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Creaky_wooden_casket.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "door-creak": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "door-creak/1.ogg",
+    "dur": 7.7,
+    "rms": -21.5,
+    "source": "Squeaky door.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Squeaky_door.ogg",
+    "license": "Public domain",
+    "author": "leonmire"
+   },
+   {
+    "file": "door-creak/2.ogg",
+    "dur": 7.31,
+    "rms": -16.7,
+    "source": "Squeaky door hinge.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Squeaky_door_hinge.ogg",
+    "license": "Public domain",
+    "author": "MKFI"
+   },
+   {
+    "file": "door-creak/3.ogg",
+    "dur": 4.98,
+    "rms": -19.2,
+    "source": "Door handle creaking.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Door_handle_creaking.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "door-creak/4.ogg",
+    "dur": 3.58,
+    "rms": -20.2,
+    "source": "general/cemetary-gate.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "door-metal": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "door-metal/1.ogg",
+    "dur": 11.75,
+    "rms": -17.3,
+    "source": "Rusty metal door clasp.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Rusty_metal_door_clasp.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "door-metal/2.ogg",
+    "dur": 11.89,
+    "rms": -21,
+    "source": "Springlocked cellar door.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Springlocked_cellar_door.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "door-metal/3.ogg",
+    "dur": 11.58,
+    "rms": -20.2,
+    "source": "Metal cabinet door jarring.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Metal_cabinet_door_jarring.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "door-metal/4.ogg",
+    "dur": 4.01,
+    "rms": -18.4,
+    "source": "general/hall-gate.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "door-slide": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "door-slide/1.ogg",
+    "dur": 4.7,
+    "rms": -21.8,
+    "source": "Sliding door of veranda opening.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Sliding_door_of_veranda_opening.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   },
+   {
+    "file": "door-slide/2.ogg",
+    "dur": 8.08,
+    "rms": -20.6,
+    "source": "Elevator door closing.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Elevator_door_closing.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "door-slide/3.ogg",
+    "dur": 11.53,
+    "rms": -25.4,
+    "source": "Train automatic inner door opening closing 02.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Train_automatic_inner_door_opening_closing_02.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   }
+  ]
+ },
+ "knock": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "knock/1.ogg",
+    "dur": 2.38,
+    "rms": -19,
+    "source": "Knock on door.wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Knock_on_door.wav",
+    "license": "CC0",
+    "author": "Asud12"
+   },
+   {
+    "file": "knock/2.ogg",
+    "dur": 6.02,
+    "rms": -19.7,
+    "source": "Knocking on wood or door.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Knocking_on_wood_or_door.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "knock/3.ogg",
+    "dur": 1.2,
+    "rms": -11,
+    "source": "Door knocker audio.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Door_knocker_audio.ogg",
+    "license": "CC0",
+    "author": "Mx. Granger"
+   },
+   {
+    "file": "knock/4.ogg",
+    "dur": 2.12,
+    "rms": -17.7,
+    "source": "various/2knock.wav",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "clock": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "clock/1.ogg",
+    "dur": 18.05,
+    "rms": -21.2,
+    "source": "Clock ticking.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Clock_ticking.ogg",
+    "license": "Public domain",
+    "author": "natalie"
+   },
+   {
+    "file": "clock/2.ogg",
+    "dur": 20.27,
+    "rms": -27.4,
+    "source": "Alarm clock ticking.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Alarm_clock_ticking.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   },
+   {
+    "file": "clock/3.ogg",
+    "dur": 20,
+    "rms": -23.7,
+    "source": "LA2 kitchen clock.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:LA2_kitchen_clock.ogg",
+    "license": "Public domain",
+    "author": "LA2"
+   },
+   {
+    "file": "clock/4.ogg",
+    "dur": 24.1,
+    "rms": -20.7,
+    "source": "amb/gear-clock.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "clock/5.ogg",
+    "dur": 45,
+    "rms": -20.1,
+    "source": "amb/double-clock.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "elevator": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "elevator/1.ogg",
+    "dur": 29.49,
+    "rms": -22.1,
+    "source": "Elevator ride.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Elevator_ride.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "elevator/2.ogg",
+    "dur": 24.35,
+    "rms": -21.1,
+    "source": "Hydraulic lift down.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Hydraulic_lift_down.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "typing": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "typing/1.ogg",
+    "dur": 11.83,
+    "rms": -22.5,
+    "source": "Typing fast.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Typing_fast.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "typing/2.ogg",
+    "dur": 4,
+    "rms": -19.2,
+    "source": "Soft laptop keyboard-wxA-2.wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Soft_laptop_keyboard-wxA-2.wav",
+    "license": "CC0",
+    "author": "Mrakash1"
+   },
+   {
+    "file": "typing/3.ogg",
+    "dur": 12,
+    "rms": -26,
+    "source": "Typing - Model M 1986.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Typing_-_Model_M_1986.ogg",
+    "license": "CC0",
+    "author": "Raymangold22"
+   }
+  ]
+ },
+ "phone-ring": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "phone-ring/1.ogg",
+    "dur": 11.44,
+    "rms": -25.9,
+    "source": "Telephone.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Telephone.ogg",
+    "license": "Public domain",
+    "author": "Dsw4."
+   }
+  ]
+ },
+ "phone-dial": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "phone-dial/1.ogg",
+    "dur": 11.51,
+    "rms": -8,
+    "source": "DTMF dialing.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:DTMF_dialing.ogg",
+    "license": "Public domain",
+    "author": "User:Jahoe"
+   },
+   {
+    "file": "phone-dial/2.ogg",
+    "dur": 5,
+    "rms": -6.9,
+    "source": "US dial tone.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:US_dial_tone.ogg",
+    "license": "CC0",
+    "author": "Edokter"
+   },
+   {
+    "file": "phone-dial/3.ogg",
+    "dur": 2.87,
+    "rms": -13.8,
+    "source": "Toy phone speed dial.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Toy_phone_speed_dial.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "phone-dead": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "phone-dead/1.ogg",
+    "dur": 6,
+    "rms": -6.9,
+    "source": "NorthAmericanBusySignal.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:NorthAmericanBusySignal.ogg",
+    "license": "Public domain",
+    "author": "The original uploader was Jamieyu at English Wikipedia."
+   },
+   {
+    "file": "phone-dead/2.ogg",
+    "dur": 6.06,
+    "rms": -4.2,
+    "source": "Future SIT.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Future_SIT.ogg",
+    "license": "Public domain",
+    "author": "Lexlexlex"
+   },
+   {
+    "file": "phone-dead/3.ogg",
+    "dur": 6.06,
+    "rms": -4.2,
+    "source": "IO SIT.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:IO_SIT.ogg",
+    "license": "Public domain",
+    "author": "Lexlexlex"
+   }
+  ]
+ },
+ "modem": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "modem/1.ogg",
+    "dur": 9.5,
+    "rms": -14.1,
+    "source": "Dial up connection (short).oga",
+    "url": "https://commons.wikimedia.org/wiki/File:Dial_up_connection_(short).oga",
+    "license": "CC0",
+    "author": "PDSounds: http://www.pdsounds.org/sounds/dial_up_connection"
+   },
+   {
+    "file": "modem/2.ogg",
+    "dur": 10.81,
+    "rms": -15.7,
+    "source": "Dial up modem noises.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Dial_up_modem_noises.ogg",
+    "license": "Public domain",
+    "author": "William Termini"
+   }
+  ]
+ },
+ "static": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "static/1.ogg",
+    "dur": 10,
+    "rms": -12.4,
+    "source": "Gray noise.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Gray_noise.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "static/2.ogg",
+    "dur": 42.24,
+    "rms": -21.1,
+    "source": "Energy noise.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Energy_noise.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "static/3.ogg",
+    "dur": 20.22,
+    "rms": -15.5,
+    "source": "Energy barrier pad.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Energy_barrier_pad.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "radio": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "radio/1.ogg",
+    "dur": 9.36,
+    "rms": -8.5,
+    "source": "UVB-76.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:UVB-76.ogg",
+    "license": "Public domain",
+    "author": "Recording by Mysid"
+   },
+   {
+    "file": "radio/2.ogg",
+    "dur": 16.32,
+    "rms": -11.3,
+    "source": "The Pip.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:The_Pip.ogg",
+    "license": "CC0",
+    "author": "Chrumps"
+   },
+   {
+    "file": "radio/3.ogg",
+    "dur": 45,
+    "rms": -14,
+    "source": "Buzzer 2013 01 24.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Buzzer_2013_01_24.ogg",
+    "license": "CC0",
+    "author": "Cqeme"
+   },
+   {
+    "file": "radio/4.ogg",
+    "dur": 38.47,
+    "rms": -5.6,
+    "source": "OLIVIA 500 16 sample.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:OLIVIA_500_16_sample.ogg",
+    "license": "Public domain",
+    "author": "Geryones at English Wikipedia"
+   }
+  ]
+ },
+ "morse": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "morse/1.ogg",
+    "dur": 3.4,
+    "rms": -4,
+    "source": "SOS morse code.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:SOS_morse_code.ogg",
+    "license": "Public domain",
+    "author": "Hydrargyrum"
+   },
+   {
+    "file": "morse/2.ogg",
+    "dur": 6.13,
+    "rms": -4.5,
+    "source": "Morse code.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Morse_code.ogg",
+    "license": "Public domain",
+    "author": "Koen Timmermans"
+   }
+  ]
+ },
+ "alarm": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "alarm/1.ogg",
+    "dur": 12,
+    "rms": -9.4,
+    "source": "Alarm - Collision.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Alarm_-_Collision.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "alarm/2.ogg",
+    "dur": 4.07,
+    "rms": -13.8,
+    "source": "Alarm - Diving - H8.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Alarm_-_Diving_-_H8.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "alarm/3.ogg",
+    "dur": 12,
+    "rms": -8,
+    "source": "Alarm - Missile Emerg.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Alarm_-_Missile_Emerg.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "alarm/4.ogg",
+    "dur": 12,
+    "rms": -14.8,
+    "source": "Surface ship - Collision Alarm - USS San Diego (AFS-6) - AN-SIA-114B.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Surface_ship_-_Collision_Alarm_-_USS_San_Diego_(AFS-6)_-_AN-SIA-114B.ogg",
+    "license": "Public domain",
+    "author": "USN"
+   }
+  ]
+ },
+ "alarm-home": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "alarm-home/1.ogg",
+    "dur": 9.18,
+    "rms": -11.7,
+    "source": "Smoke alarm.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Smoke_alarm.ogg",
+    "license": "Public domain",
+    "author": "cori"
+   },
+   {
+    "file": "alarm-home/2.ogg",
+    "dur": 8,
+    "rms": -1.1,
+    "source": "NFPA Fire Alarm.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:NFPA_Fire_Alarm.ogg",
+    "license": "Public domain",
+    "author": "Awesome Aasim"
+   },
+   {
+    "file": "alarm-home/3.ogg",
+    "dur": 9.62,
+    "rms": -4.8,
+    "source": "Alarm or siren.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Alarm_or_siren.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "siren": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "siren/1.ogg",
+    "dur": 45,
+    "rms": -15.6,
+    "source": "Civil-defense-siren-waver.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Civil-defense-siren-waver.ogg",
+    "license": "Public domain",
+    "author": "Techtonic"
+   },
+   {
+    "file": "siren/2.ogg",
+    "dur": 45,
+    "rms": -9.9,
+    "source": "Civil-defense-siren-constant.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Civil-defense-siren-constant.ogg",
+    "license": "Public domain",
+    "author": "Techtonic"
+   },
+   {
+    "file": "siren/3.ogg",
+    "dur": 29.2,
+    "rms": -22.9,
+    "source": "American police siren i.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:American_police_siren_i.ogg",
+    "license": "Public domain",
+    "author": "lezer"
+   },
+   {
+    "file": "siren/4.ogg",
+    "dur": 45,
+    "rms": -8.8,
+    "source": "Motorsirene - Feuerwehralarm.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Motorsirene_-_Feuerwehralarm.ogg",
+    "license": "Public domain",
+    "author": "Nallchen"
+   }
+  ]
+ },
+ "monitor": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "monitor/1.ogg",
+    "dur": 11.57,
+    "rms": -7.3,
+    "source": "Heart Monitor Beep--freesound.org.oga",
+    "url": "https://commons.wikimedia.org/wiki/File:Heart_Monitor_Beep--freesound.org.oga",
+    "license": "CC0",
+    "author": "samfk360"
+   },
+   {
+    "file": "monitor/2.ogg",
+    "dur": 4.34,
+    "rms": -12,
+    "source": "Sputnik beep.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Sputnik_beep.ogg",
+    "license": "Public domain",
+    "author": "NASA"
+   }
+  ]
+ },
+ "breath": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "breath/1.ogg",
+    "dur": 6.76,
+    "rms": -17.3,
+    "source": "Breathing man.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Breathing_man.ogg",
+    "license": "Public domain",
+    "author": "hugh"
+   },
+   {
+    "file": "breath/2.ogg",
+    "dur": 11.74,
+    "rms": -22.8,
+    "source": "Heavy breathing 3.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Heavy_breathing_3.ogg",
+    "license": "Public domain",
+    "author": "ezwa"
+   }
+  ]
+ },
+ "whisper": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "whisper/1.ogg",
+    "dur": 1.75,
+    "rms": -15.6,
+    "source": "Whispering-example.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Whispering-example.ogg",
+    "license": "CC0",
+    "author": "Mx. Granger"
+   }
+  ]
+ },
+ "raven": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "raven/2.ogg",
+    "dur": 5.65,
+    "rms": -13.4,
+    "source": "Common Raven Grand Teton National Park.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Common_Raven_Grand_Teton_National_Park.ogg",
+    "license": "Public domain",
+    "author": "National Park Service"
+   },
+   {
+    "file": "raven/3.ogg",
+    "dur": 8.06,
+    "rms": -18.4,
+    "source": "Yellowstone sound library - Common Raven - 001.mp3",
+    "url": "https://commons.wikimedia.org/wiki/File:Yellowstone_sound_library_-_Common_Raven_-_001.mp3",
+    "license": "Public domain",
+    "author": "NPS/David Restivo"
+   },
+   {
+    "file": "raven/4.ogg",
+    "dur": 5.64,
+    "rms": -15.8,
+    "source": "general/crow.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "wolf": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "wolf/1.ogg",
+    "dur": 11.97,
+    "rms": -13.9,
+    "source": "Wolf howls.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Wolf_howls.ogg",
+    "license": "Public domain",
+    "author": ""
+   }
+  ]
+ },
+ "dog": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "dog/1.ogg",
+    "dur": 4.67,
+    "rms": -9.7,
+    "source": "general/dog.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "cat": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "cat/1.ogg",
+    "dur": 11.54,
+    "rms": -15.3,
+    "source": "Meow of a pleading cat.oga",
+    "url": "https://commons.wikimedia.org/wiki/File:Meow_of_a_pleading_cat.oga",
+    "license": "Public domain",
+    "author": "Heismark"
+   },
+   {
+    "file": "cat/2.ogg",
+    "dur": 1.51,
+    "rms": -13.2,
+    "source": "Meow of a Siamese cat - freemaster2.wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Meow_of_a_Siamese_cat_-_freemaster2.wav",
+    "license": "CC0",
+    "author": "freemaster2"
+   }
+  ]
+ },
+ "horses": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "horses/1.ogg",
+    "dur": 11.94,
+    "rms": -20,
+    "source": "Six Horses Galloping By.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Six_Horses_Galloping_By.ogg",
+    "license": "CC0",
+    "author": "Freesound Community https://pixabay.com/users/freesound_community-46691455/\n\nBru"
+   }
+  ]
+ },
+ "whale": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "whale/1.ogg",
+    "dur": 24,
+    "rms": -11.9,
+    "source": "Blue Whale NE Pacific.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Blue_Whale_NE_Pacific.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "whale/2.ogg",
+    "dur": 30.46,
+    "rms": -19,
+    "source": "Humpback whale moo.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Humpback_whale_moo.ogg",
+    "license": "Public domain",
+    "author": "\"The recordings available here were made by the National Park Service, using a h"
+   },
+   {
+    "file": "whale/3.ogg",
+    "dur": 35.6,
+    "rms": -29.4,
+    "source": "Sperm Whale Slow Clicks.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Sperm_Whale_Slow_Clicks.ogg",
+    "license": "Public domain",
+    "author": "NOAA"
+   },
+   {
+    "file": "whale/4.ogg",
+    "dur": 22.75,
+    "rms": -16.1,
+    "source": "Blue Whale South Pacific.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Blue_Whale_South_Pacific.ogg",
+    "license": "Public domain",
+    "author": ""
+   }
+  ]
+ },
+ "creature": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "creature/1.ogg",
+    "dur": 4.63,
+    "rms": -14,
+    "source": "various/groan.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "creature/2.ogg",
+    "dur": 3.27,
+    "rms": -13.7,
+    "source": "general/forest-creature-attack.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "creature/3.ogg",
+    "dur": 1.88,
+    "rms": -17.4,
+    "source": "general/hiss-prison.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "creature/4.ogg",
+    "dur": 7.66,
+    "rms": -19.3,
+    "source": "Shrieking squeaking.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Shrieking_squeaking.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "space": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "space/1.ogg",
+    "dur": 45,
+    "rms": -16,
+    "source": "Eerie Sounds of Saturn’s Radio Emissions (PIA07966).wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Eerie_Sounds_of_Saturn%E2%80%99s_Radio_Emissions_(PIA07966).wav",
+    "license": "Public domain",
+    "author": "NASA/JPL/University of Iowa"
+   },
+   {
+    "file": "space/2.ogg",
+    "dur": 12.97,
+    "rms": -15.2,
+    "source": "Bizarre Sounds of Saturn’s Radio Emissions (PIA07967).wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Bizarre_Sounds_of_Saturn%E2%80%99s_Radio_Emissions_(PIA07967).wav",
+    "license": "Public domain",
+    "author": "NASA/JPL/University of Iowa"
+   },
+   {
+    "file": "space/3.ogg",
+    "dur": 45,
+    "rms": -16,
+    "source": "Titan haze sound.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Titan_haze_sound.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "space/4.ogg",
+    "dur": 45,
+    "rms": -8,
+    "source": "Titan surface sound.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Titan_surface_sound.ogg",
+    "license": "Public domain",
+    "author": ""
+   },
+   {
+    "file": "space/5.ogg",
+    "dur": 45,
+    "rms": -16.3,
+    "source": "Saturn sound2.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Saturn_sound2.ogg",
+    "license": "Public domain",
+    "author": "NASA/JPL/University of Iowa"
+   },
+   {
+    "file": "space/6.ogg",
+    "dur": 45,
+    "rms": -14.5,
+    "source": "Spacebackground.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Spacebackground.ogg",
+    "license": "Public domain",
+    "author": "No machine-readable author provided. Alphax assumed (based on copyright claims)."
+   }
+  ]
+ },
+ "mars-wind": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "mars-wind/1.ogg",
+    "dur": 39.96,
+    "rms": -22,
+    "source": "Perseverance rover's SuperCam records wind on Mars.oga",
+    "url": "https://commons.wikimedia.org/wiki/File:Perseverance_rover%27s_SuperCam_records_wind_on_Mars.oga",
+    "license": "Public domain",
+    "author": "NASA/JPL-Caltech/LANL/CNES/CNRS/ISAE-Supaero"
+   }
+  ]
+ },
+ "cosmic-hit": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "cosmic-hit/1.ogg",
+    "dur": 11.78,
+    "rms": -23.5,
+    "source": "Lightning Strikes at Saturn (PIA14310).wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Lightning_Strikes_at_Saturn_(PIA14310).wav",
+    "license": "Public domain",
+    "author": "NASA/JPL-Caltech/University of Iowa"
+   },
+   {
+    "file": "cosmic-hit/2.ogg",
+    "dur": 11.94,
+    "rms": -20.1,
+    "source": "NASA’s InSight Records the Sound of a Martian Impact (PIA25582).wav",
+    "url": "https://commons.wikimedia.org/wiki/File:NASA%E2%80%99s_InSight_Records_the_Sound_of_a_Martian_Impact_(PIA25582).wav",
+    "license": "Public domain",
+    "author": "NASA/JPL-Caltech/CNES/Imperial College London"
+   },
+   {
+    "file": "cosmic-hit/3.ogg",
+    "dur": 4.37,
+    "rms": -12,
+    "source": "Sputnik - Beep.mp3",
+    "url": "https://commons.wikimedia.org/wiki/File:Sputnik_-_Beep.mp3",
+    "license": "Public domain",
+    "author": "NASA"
+   }
+  ]
+ },
+ "rumble": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "rumble/1.ogg",
+    "dur": 45,
+    "rms": -9.7,
+    "source": "385098 morganpurkis volcano.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:385098_morganpurkis_volcano.ogg",
+    "license": "CC0",
+    "author": "morganperkins"
+   },
+   {
+    "file": "rumble/2.ogg",
+    "dur": 45,
+    "rms": -10.2,
+    "source": "Earthquake.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Earthquake.ogg",
+    "license": "Public domain",
+    "author": "igel457"
+   }
+  ]
+ },
+ "crowd": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "crowd/2.ogg",
+    "dur": 30.12,
+    "rms": -21.8,
+    "source": "Shopping mall less crowded.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Shopping_mall_less_crowded.ogg",
+    "license": "Public domain",
+    "author": "natalie"
+   },
+   {
+    "file": "crowd/3.ogg",
+    "dur": 45,
+    "rms": -13.5,
+    "source": "High school cafeteria.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:High_school_cafeteria.ogg",
+    "license": "Public domain",
+    "author": "aradlaw"
+   },
+   {
+    "file": "crowd/4.ogg",
+    "dur": 45,
+    "rms": -20.7,
+    "source": "Douzen kids on playground.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Douzen_kids_on_playground.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   },
+   {
+    "file": "crowd/5.ogg",
+    "dur": 45,
+    "rms": -18.8,
+    "source": "Indoor swimming pool hall.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Indoor_swimming_pool_hall.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "bell": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "bell/1.ogg",
+    "dur": 11.99,
+    "rms": -18.9,
+    "source": "Cloche de l'Eglise de Sainte-Marie-des-Batignolles.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Cloche_de_l%27Eglise_de_Sainte-Marie-des-Batignolles.ogg",
+    "license": "CC0",
+    "author": "milo"
+   },
+   {
+    "file": "bell/2.ogg",
+    "dur": 11.97,
+    "rms": -20,
+    "source": "Zajeci zvony kostel 2025.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Zajeci_zvony_kostel_2025.ogg",
+    "license": "CC0",
+    "author": "Nostrifikator"
+   },
+   {
+    "file": "bell/3.ogg",
+    "dur": 5.32,
+    "rms": -16.8,
+    "source": "Gong or bell vibrant (short).ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Gong_or_bell_vibrant_(short).ogg",
+    "license": "CC0",
+    "author": "PDSounds description: http://www.pdsounds.org/sounds/gong_or_bell_vibrant"
+   },
+   {
+    "file": "bell/4.ogg",
+    "dur": 9.99,
+    "rms": -23.2,
+    "source": "Gong55.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Gong55.ogg",
+    "license": "CC0",
+    "author": "stephan"
+   }
+  ]
+ },
+ "foghorn": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "foghorn/1.ogg",
+    "dur": 5,
+    "rms": -9.5,
+    "source": "Original foghorn at East Brother Island Lighthouse.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Original_foghorn_at_East_Brother_Island_Lighthouse.ogg",
+    "license": "CC0",
+    "author": "Elwood P. Dowd"
+   },
+   {
+    "file": "foghorn/2.ogg",
+    "dur": 12,
+    "rms": -14.8,
+    "source": "Fog signal Bremerhaven.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Fog_signal_Bremerhaven.ogg",
+    "license": "CC0",
+    "author": "Tvabutzku1234"
+   },
+   {
+    "file": "foghorn/3.ogg",
+    "dur": 11.51,
+    "rms": -7.1,
+    "source": "Cruise ship Albatros ship horn.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Cruise_ship_Albatros_ship_horn.ogg",
+    "license": "CC0",
+    "author": "Tvabutzku1234"
+   }
+  ]
+ },
+ "glass": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "glass/1.ogg",
+    "dur": 4.03,
+    "rms": -11.9,
+    "source": "various/break-window.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "glass/2.ogg",
+    "dur": 10.65,
+    "rms": -23.7,
+    "source": "Binging glass.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Binging_glass.ogg",
+    "license": "Public domain",
+    "author": "hugh"
+   }
+  ]
+ },
+ "fire": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "fire/1.ogg",
+    "dur": 3.07,
+    "rms": -28.7,
+    "source": "various/crackling.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "fire/2.ogg",
+    "dur": 36.17,
+    "rms": -10.6,
+    "source": "various/fire.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "water": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "water/1.ogg",
+    "dur": 18.86,
+    "rms": -20.8,
+    "source": "Flowing-water-100019.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Flowing-water-100019.ogg",
+    "license": "Public domain",
+    "author": "Fg2"
+   },
+   {
+    "file": "water/2.ogg",
+    "dur": 20.62,
+    "rms": -11.7,
+    "source": "Hemlock stream.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Hemlock_stream.ogg",
+    "license": "Public domain",
+    "author": "Dirtslayer"
+   },
+   {
+    "file": "water/3.ogg",
+    "dur": 18.22,
+    "rms": -22.3,
+    "source": "amb/fountain.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "water/4.ogg",
+    "dur": 45,
+    "rms": -25,
+    "source": "Water flowing pouring trickling.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Water_flowing_pouring_trickling.ogg",
+    "license": "Public domain",
+    "author": "stephan"
+   }
+  ]
+ },
+ "train": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "train/1.ogg",
+    "dur": 45,
+    "rms": -16.7,
+    "source": "Taiwan railways EP727 train cars sounds.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Taiwan_railways_EP727_train_cars_sounds.ogg",
+    "license": "CC0",
+    "author": "Jidanni"
+   }
+  ]
+ },
+ "car": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "car/1.ogg",
+    "dur": 2.24,
+    "rms": -21.1,
+    "source": "various/fiatopen.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "car/2.ogg",
+    "dur": 2.49,
+    "rms": -9.8,
+    "source": "various/fiatclose.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "car/3.ogg",
+    "dur": 12,
+    "rms": -17.2,
+    "source": "various/fiatdrive.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "car/4.ogg",
+    "dur": 2.98,
+    "rms": -10.8,
+    "source": "Car Horn.wav",
+    "url": "https://commons.wikimedia.org/wiki/File:Car_Horn.wav",
+    "license": "CC0",
+    "author": "15HPanska_Ruttner_Jan"
+   }
+  ]
+ },
+ "boom": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "boom/1.ogg",
+    "dur": 2.63,
+    "rms": -13.2,
+    "source": "Explosion 10.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Explosion_10.ogg",
+    "license": "Public domain",
+    "author": "tcpp"
+   },
+   {
+    "file": "boom/2.ogg",
+    "dur": 1.45,
+    "rms": -17.1,
+    "source": "Explosion-LS100155.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Explosion-LS100155.ogg",
+    "license": "Public domain",
+    "author": "Fg2"
+   },
+   {
+    "file": "boom/3.ogg",
+    "dur": 7.05,
+    "rms": -18.1,
+    "source": "Explosions-LS100152.ogg",
+    "url": "https://commons.wikimedia.org/wiki/File:Explosions-LS100152.ogg",
+    "license": "Public domain",
+    "author": "Fg2"
+   }
+  ]
+ },
+ "page": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "page/1.ogg",
+    "dur": 0.92,
+    "rms": -19.3,
+    "source": "book/pg1.wav",
+    "url": "https://archive.org/details/book-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "page/2.ogg",
+    "dur": 1.57,
+    "rms": -23.7,
+    "source": "book/pg7.wav",
+    "url": "https://archive.org/details/book-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "page/3.ogg",
+    "dur": 0.47,
+    "rms": -17,
+    "source": "book/pg13.wav",
+    "url": "https://archive.org/details/book-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "page/4.ogg",
+    "dur": 1.2,
+    "rms": -19.9,
+    "source": "book/book-open.wav",
+    "url": "https://archive.org/details/book-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "page/5.ogg",
+    "dur": 0.34,
+    "rms": -14.1,
+    "source": "book/close-book.wav",
+    "url": "https://archive.org/details/book-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "chimes": {
+  "kind": "oneshot",
+  "files": [
+   {
+    "file": "chimes/1.ogg",
+    "dur": 11.88,
+    "rms": -16.9,
+    "source": "general/chimes1.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "chimes/2.ogg",
+    "dur": 11.86,
+    "rms": -16,
+    "source": "general/chimes2.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "chimes/3.ogg",
+    "dur": 11.88,
+    "rms": -15.6,
+    "source": "general/chimes3.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "chimes/4.ogg",
+    "dur": 11.88,
+    "rms": -16.1,
+    "source": "general/chimes4.mp3",
+    "url": "https://archive.org/details/auldhame-general-sounds",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "forest": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "forest/1.ogg",
+    "dur": 39.65,
+    "rms": -23.7,
+    "source": "amb/forest1.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "forest/2.ogg",
+    "dur": 45,
+    "rms": -18.1,
+    "source": "amb/forest2.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "forest/3.ogg",
+    "dur": 45,
+    "rms": -18.2,
+    "source": "various/forest.mp3",
+    "url": "https://archive.org/details/various-sound-effects",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "forest/4.ogg",
+    "dur": 12.94,
+    "rms": -14.2,
+    "source": "amb/tree.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "cave": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "cave/1.ogg",
+    "dur": 15.6,
+    "rms": -14.2,
+    "source": "amb/mine1.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "cave/2.ogg",
+    "dur": 29.87,
+    "rms": -14,
+    "source": "amb/mine2.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "cave/3.ogg",
+    "dur": 45,
+    "rms": -17.6,
+    "source": "amb/sunk.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "room": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "room/1.ogg",
+    "dur": 36.05,
+    "rms": -22,
+    "source": "amb/in1.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "room/2.ogg",
+    "dur": 45,
+    "rms": -18.9,
+    "source": "amb/in2.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "room/3.ogg",
+    "dur": 36,
+    "rms": -15.6,
+    "source": "amb/out1.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "room/4.ogg",
+    "dur": 45,
+    "rms": -21.8,
+    "source": "amb/out2.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "dream": {
+  "kind": "bed",
+  "files": [
+   {
+    "file": "dream/1.ogg",
+    "dur": 45,
+    "rms": -16.8,
+    "source": "amb/dream.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "dream/2.ogg",
+    "dur": 17.33,
+    "rms": -16.7,
+    "source": "amb/heart-clock.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   },
+   {
+    "file": "dream/3.ogg",
+    "dur": 27.4,
+    "rms": -18.3,
+    "source": "amb/centipede.mp3",
+    "url": "https://archive.org/details/auldhame-ambiances",
+    "license": "CC0 1.0",
+    "author": "Patrick Lauser"
+   }
+  ]
+ },
+ "m-suspense": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-suspense/1.ogg",
+    "dur": 110,
+    "rms": -21,
+    "source": "horror/Horror Suspense.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-suspense/2.ogg",
+    "dur": 55.01,
+    "rms": -18.9,
+    "source": "horror/Footsteps in the Attic.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-suspense/3.ogg",
+    "dur": 98.8,
+    "rms": -18.6,
+    "source": "horror/Hidden Truth.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-suspense/4.ogg",
+    "dur": 104.25,
+    "rms": -17.2,
+    "source": "horror/Asking Questions.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-cosmic": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-cosmic/1.ogg",
+    "dur": 110,
+    "rms": -17.4,
+    "source": "horror/Alien Spaceship Atmosphere.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-cosmic/2.ogg",
+    "dur": 110,
+    "rms": -11.9,
+    "source": "horror/Mysterious Lights.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-cosmic/3.ogg",
+    "dur": 110,
+    "rms": -17.8,
+    "source": "horror/Alien Invasion.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-cosmic/4.ogg",
+    "dur": 96.81,
+    "rms": -15.9,
+    "source": "scoring/Dreams of Vain.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-mystery": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-mystery/1.ogg",
+    "dur": 110,
+    "rms": -16,
+    "source": "horror/Horror Mytery.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-mystery/2.ogg",
+    "dur": 107.36,
+    "rms": -14.9,
+    "source": "horror/The Land of the Dead.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-mystery/3.ogg",
+    "dur": 97.8,
+    "rms": -13.1,
+    "source": "scoring/After the End.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-mystery/4.ogg",
+    "dur": 110,
+    "rms": -20.7,
+    "source": "scoring/Travelers Notebook.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-dread": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-dread/1.ogg",
+    "dur": 76.07,
+    "rms": -16.4,
+    "source": "horror/Cursed Intro.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-dread/2.ogg",
+    "dur": 110,
+    "rms": -16.5,
+    "source": "horror/Satin Danger.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-dread/3.ogg",
+    "dur": 110,
+    "rms": -23.1,
+    "source": "horror/Horroriffic.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-dread/4.ogg",
+    "dur": 110,
+    "rms": -18.4,
+    "source": "horror/Dawn of the Apocalypse.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-tense": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-tense/1.ogg",
+    "dur": 110,
+    "rms": -18.4,
+    "source": "horror/Mind Chaos.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-tense/2.ogg",
+    "dur": 110,
+    "rms": -14.6,
+    "source": "scoring/Driving Concern.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-tense/3.ogg",
+    "dur": 97.07,
+    "rms": -16.2,
+    "source": "scoring/The Drama.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-urgent": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-urgent/1.ogg",
+    "dur": 95.43,
+    "rms": -14.8,
+    "source": "scoring/Final Step.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-urgent/2.ogg",
+    "dur": 110,
+    "rms": -15.6,
+    "source": "scoring/Action Strike.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-urgent/3.ogg",
+    "dur": 99.37,
+    "rms": -13.3,
+    "source": "scoring/Beginning of Conflict.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-urgent/4.ogg",
+    "dur": 37.12,
+    "rms": -15,
+    "source": "scoring/City Run.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ },
+ "m-tale": {
+  "kind": "music",
+  "files": [
+   {
+    "file": "m-tale/1.ogg",
+    "dur": 110,
+    "rms": -17.2,
+    "source": "scoring/Magic in the Garden.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-tale/2.ogg",
+    "dur": 110,
+    "rms": -18.8,
+    "source": "scoring/Ice and Snow.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   },
+   {
+    "file": "m-tale/3.ogg",
+    "dur": 110,
+    "rms": -13.4,
+    "source": "scoring/Slice of Life.mp3",
+    "url": "https://freepd.com/",
+    "license": "CC0 1.0",
+    "author": "Kevin MacLeod / FreePD"
+   }
+  ]
+ }
+}

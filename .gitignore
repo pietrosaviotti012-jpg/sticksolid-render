@@ -1,0 +1,25 @@
+# dependencies and models: installed by skills/kit/setup.sh, never committed
+node_modules/
+.venv/
+skills/kit/models/
+__pycache__/
+*.pyc
+
+# working files and finished videos: videos go to the Releases (GitHub refuses files over 100 MB)
+kit/out/
+*.mp4
+*.mov
+*.raw.wav
+voce/**/*.wav
+stills/
+seg/
+
+# secrets never live here: this repository is public
+.env
+*.key
+*.pem
+
+# editors and systems
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,5 @@
+[
+ {"page":"man","out":"out/scheda/corpo-prima.png","cfg":{"uniform":false,"pose":"stand","turn":-0.15,"fov":22,"camPos":[0,1.05,6.2],"camLook":[0,0.98,0],"face":{"brow":0.6,"tilt":0.7,"lid":0.8,"smile":true,"eyes":1.35}}},
+ {"page":"man","out":"out/scheda/corpo-dopo.png","cfg":{"pose":"stand","turn":-0.15,"fov":22,"camPos":[0,1.05,6.2],"camLook":[0,0.98,0],"face":{"brow":0.6,"tilt":0.7,"lid":0.8,"smile":true,"eyes":1.35}}},
+ {"page":"man","out":"out/scheda/corpo-dopo-ciao.png","cfg":{"pose":"hi","turn":-0.2,"fov":22,"camPos":[0,1.05,6.2],"camLook":[0,0.98,0],"face":{"brow":0.6,"tilt":0.7,"lid":0.8,"smile":true,"eyes":1.35}}}
+]

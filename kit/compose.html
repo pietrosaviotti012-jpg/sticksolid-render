@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>foto profilo</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="1600" height="1600"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script>
+<script>
+// window.renderCompose(cfg) -> PNG data URL
+// cfg: { bg, man: { src, x, y, w }, stick: { drawStick options, x, y, s }, stickFirst, guide }
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+window.renderCompose = async (cfg) => {
+  const S = cv.width;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.fillStyle = cfg.bg; ctx.fillRect(0, 0, S, S);
+  const man = cfg.man ? await load(cfg.man.src) : null;
+  ctx.save();
+  if (cfg.zoom) { const [fx, fy] = cfg.focus || [S / 2, S / 2]; ctx.translate(S / 2, S / 2); ctx.scale(cfg.zoom, cfg.zoom); ctx.translate(-fx, -fy); }
+  const drawMan = () => { if (man) ctx.drawImage(man, cfg.man.x, cfg.man.y, cfg.man.w, cfg.man.w); };
+  const drawSt = () => { if (cfg.stick) drawStick(ctx, { hat: 'none', belt: false, ...cfg.stick }); };
+  if (cfg.stickFirst) { drawSt(); drawMan(); } else { drawMan(); drawSt(); }
+  ctx.restore();
+  if (cfg.guide) { // the circle the platforms crop to, for checking only
+    ctx.beginPath(); ctx.arc(S / 2, S / 2, S / 2 - 4, 0, TAU); ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(0,0,0,.35)'; ctx.setLineDash([24, 18]); ctx.stroke(); ctx.setLineDash([]);
+  }
+  return cv.toDataURL('image/png');
+};
+// a review sheet: each picture cropped to the circle the platforms show, large and at phone size
+window.renderSheet = async ({ items, bg = '#f3f1ec' }) => {
+  const big = 520, small = 110, pad = 60, colW = big + pad;
+  cv.width = pad + items.length * colW; cv.height = 900;
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = bg; ctx.fillRect(0, 0, cv.width, cv.height);
+  for (let i = 0; i < items.length; i++) {
+    const img = await load(items[i].src), x = pad + i * colW;
+    for (const [cx, cy, r] of [[x + big / 2, pad + big / 2, big / 2], [x + big / 2 - 80, pad + big + 140, small / 2], [x + big / 2 + 80, pad + big + 140, 40 / 2 * 1.6]]) {
+      ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, r, 0, TAU); ctx.clip(); ctx.drawImage(img, cx - r, cy - r, r * 2, r * 2); ctx.restore();
+    }
+    text(ctx, items[i].label, x + big / 2, pad + big + 260, 44, '#221c22', null, 0);
+  }
+  const url = cv.toDataURL('image/jpeg', 0.9); cv.width = cv.height = 1600; return url;
+};
+document.fonts.load('700 40px Poppins').then(() => { window.composeReady = true; });
+</script></body></html>

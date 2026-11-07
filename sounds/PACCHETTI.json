@@ -1,0 +1,41 @@
+{
+ "alias": {
+    "money": "phone","legend": "mystery", "misteri": "mystery", "regole": "rules", "silence": "rules", "silenzio": "rules", "telefono": "phone", "conto-alla-rovescia": "countdown", "tale": "fable", "fiaba": "fable"},
+ "formats": {
+  "your-call": {
+   "music": ["m-suspense", "m-dread"], "bed": ["room", "wind", "forest"],
+   "swap": {"chime": "phone-dial", "shimmer": "dream", "crack": "floor-creak", "paper": "floor-creak"},
+   "extra": ["door-creak", "knock", "breath", "whisper", "steps", "dog", "creature", "siren", "phone-ring"]
+  },
+  "what-if": {
+   "music": ["m-cosmic"], "bed": ["space", "mars-wind"],
+   "swap": {"wind": "mars-wind", "thunder": "cosmic-hit", "crack": "cosmic-hit", "shimmer": "space", "chime": "monitor", "rain": "static", "waves": "whale"},
+   "extra": ["rumble", "whale", "radio", "morse", "crowd", "clock", "boom", "alarm"]
+  },
+  "mystery": {
+   "music": ["m-mystery"], "bed": ["waves", "cave", "wind"],
+   "swap": {"shimmer": "bell", "chime": "bell", "crack": "floor-creak", "paper": "page"},
+   "extra": ["foghorn", "raven", "wolf", "door-metal", "horses", "fire", "water", "clock"]
+  },
+  "rules": {
+   "music": ["m-dread", "m-tense"], "bed": ["radio", "room"],
+   "swap": {"shimmer": "radio", "chime": "alarm-home", "crack": "door-metal", "paper": "page", "wind": "static"},
+   "extra": ["knock", "door-creak", "elevator", "breath", "whisper", "siren", "clock", "phone-dead"]
+  },
+  "phone": {
+   "music": ["m-tense", "m-suspense"], "bed": ["static", "room"],
+   "swap": {"chime": "phone-dial", "shimmer": "modem", "crack": "phone-dead", "wind": "static", "paper": "typing"},
+   "extra": ["phone-ring", "typing", "monitor", "car", "steps", "knock", "breath"]
+  },
+  "countdown": {
+   "music": ["m-urgent"], "bed": ["static", "cave"],
+   "swap": {"shimmer": "monitor", "chime": "alarm", "crack": "boom", "thunder": "boom", "wind": "siren", "paper": "radio"},
+   "extra": ["alarm", "alarm-home", "siren", "radio", "morse", "clock", "train", "crowd", "rumble"]
+  },
+  "fable": {
+   "music": [], "bed": ["forest", "water"],
+   "swap": {"shimmer": "chimes", "chime": "chimes", "crack": "fire", "paper": "page"},
+   "extra": ["raven", "cat", "horses", "bell", "foghorn", "m-tale"]
+  }
+ }
+}

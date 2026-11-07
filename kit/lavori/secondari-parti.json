@@ -1,0 +1,491 @@
+[
+ {
+  "page": "man",
+  "out": "out/secondari/solid-donna.png",
+  "cfg": {
+   "shirt": "#3fa35b",
+   "look": {
+    "hair": "long",
+    "hairColor": "#6b3e1f",
+    "beard": false
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-donna-faccia.png",
+  "cfg": {
+   "shirt": "#3fa35b",
+   "look": {
+    "hair": "long",
+    "hairColor": "#6b3e1f",
+    "beard": false
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-ragazza.png",
+  "cfg": {
+   "shirt": "#f08a24",
+   "look": {
+    "hair": "pony",
+    "hairColor": "#2b1d14",
+    "beard": false
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-ragazza-faccia.png",
+  "cfg": {
+   "shirt": "#f08a24",
+   "look": {
+    "hair": "pony",
+    "hairColor": "#2b1d14",
+    "beard": false
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-bambino.png",
+  "cfg": {
+   "shirt": "#f2b52a",
+   "size": 0.62,
+   "headBig": 1.3,
+   "hat": "cap",
+   "hatColor": "#2a8f7a",
+   "look": {
+    "hair": "short",
+    "beard": false
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-bambino-faccia.png",
+  "cfg": {
+   "shirt": "#f2b52a",
+   "size": 0.62,
+   "headBig": 1.3,
+   "hat": "cap",
+   "hatColor": "#2a8f7a",
+   "look": {
+    "hair": "short",
+    "beard": false
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 4.433,
+   "camPos": [
+    0,
+    1.10872,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.08872,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-nonno.png",
+  "cfg": {
+   "shirt": "#8a5a3c",
+   "sleeves": "long",
+   "pants": "#5b5a55",
+   "look": {
+    "hair": "bald",
+    "hairColor": "#d8d4cc",
+    "beardColor": "#e8e4dc",
+    "fullBeard": true,
+    "glasses": true
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-nonno-faccia.png",
+  "cfg": {
+   "shirt": "#8a5a3c",
+   "sleeves": "long",
+   "pants": "#5b5a55",
+   "look": {
+    "hair": "bald",
+    "hairColor": "#d8d4cc",
+    "beardColor": "#e8e4dc",
+    "fullBeard": true,
+    "glasses": true
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-scienziata.png",
+  "cfg": {
+   "shirt": "#f4f2ec",
+   "sleeves": "long",
+   "hem": -0.42,
+   "look": {
+    "hair": "bun",
+    "hairColor": "#2b1d14",
+    "beard": false,
+    "glasses": true
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-scienziata-faccia.png",
+  "cfg": {
+   "shirt": "#f4f2ec",
+   "sleeves": "long",
+   "hem": -0.42,
+   "look": {
+    "hair": "bun",
+    "hairColor": "#2b1d14",
+    "beard": false,
+    "glasses": true
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-soldato.png",
+  "cfg": {
+   "shirt": "#5f6b3a",
+   "pants": "#4a5230",
+   "hat": "helmet",
+   "look": {
+    "hair": "short"
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-soldato-faccia.png",
+  "cfg": {
+   "shirt": "#5f6b3a",
+   "pants": "#4a5230",
+   "hat": "helmet",
+   "look": {
+    "hair": "short"
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-cattivo.png",
+  "cfg": {
+   "shirt": "#3a2547",
+   "sleeves": "long",
+   "hem": -0.3,
+   "pants": "#241a2c",
+   "shoes": "#1a1418",
+   "look": {
+    "hair": "short",
+    "hairColor": "#151015"
+   },
+   "pose": "stand",
+   "turn": -0.12,
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "face": {
+    "brow": 0.3,
+    "tilt": -0.5,
+    "lid": -0.3,
+    "mouth": "smirk",
+    "eyes": 1.35,
+    "look": [
+     0.6,
+     0
+    ]
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/secondari/solid-cattivo-faccia.png",
+  "cfg": {
+   "shirt": "#3a2547",
+   "sleeves": "long",
+   "hem": -0.3,
+   "pants": "#241a2c",
+   "shoes": "#1a1418",
+   "look": {
+    "hair": "short",
+    "hairColor": "#151015"
+   },
+   "pose": "stand",
+   "ground": false,
+   "turn": -0.12,
+   "fov": 5.5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "face": {
+    "brow": 0.3,
+    "tilt": -0.5,
+    "lid": -0.3,
+    "mouth": "smirk",
+    "eyes": 1.35,
+    "look": [
+     0.6,
+     0
+    ]
+   }
+  }
+ }
+]

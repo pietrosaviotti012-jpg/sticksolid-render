@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>didascalie</title>
+<style>@font-face{font-family:Poppins;font-weight:700;src:url(lib/Poppins-Bold.ttf)}html,body{margin:0;background:#888}canvas{display:block}</style>
+</head><body>
+<canvas id="c" width="2200" height="1920"></canvas>
+<script src="lib/lib.js"></script><script src="lib/chars.js"></script>
+<script>
+// window.renderDidascalie() -> JPEG: two phone frames side by side showing the caption style of each world.
+const cv = document.getElementById('c'), ctx = cv.getContext('2d');
+const load = (src) => new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; i.src = src + '?' + Date.now(); });
+const YEL = '#ffc93c';
+// a caption: Poppins Bold, white, dark outline; the key word in yellow; centred at y (70% down the frame)
+function caption(x, y, words, size, key = -1) {
+  ctx.font = `700 ${size}px Poppins`; const sp = size * 0.28;
+  const widths = words.map(w => ctx.measureText(w).width), total = widths.reduce((a, b) => a + b, 0) + sp * (words.length - 1);
+  let cx = x - total / 2;
+  words.forEach((w, i) => {
+    const col = i === key ? YEL : '#fff';
+    text(ctx, w, cx + widths[i] / 2, y, size, col, INK, size * 0.2, 'Poppins', 700, 'center'); text(ctx, w, cx + widths[i] / 2, y, size, col, null, 0);
+    cx += widths[i] + sp;
+  });
+}
+function frame(ox, label) {
+  ctx.save(); ctx.translate(ox, 0);
+  ctx.strokeStyle = 'rgba(0,0,0,.25)'; ctx.lineWidth = 6; ctx.strokeRect(3, 3, 1074, 1914);
+  // safe areas: the band where captions go, and the edges the apps cover
+  ctx.fillStyle = 'rgba(255,255,255,.12)'; ctx.fillRect(0, 1250, 1080, 170);
+  ctx.setLineDash([18, 12]); ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 3; ctx.strokeRect(100, 220, 880, 1280); ctx.setLineDash([]);
+  text(ctx, label, 540, 120, 44, '#fff', INK, 9);
+  ctx.restore();
+}
+window.renderDidascalie = async () => {
+  ctx.fillStyle = '#1b1a20'; ctx.fillRect(0, 0, cv.width, cv.height);
+  // Stick's world
+  ctx.save(); rrect(ctx, 0, 0, 1080, 1920, 0); ctx.clip();
+  const g = ctx.createLinearGradient(0, 0, 0, 1920); g.addColorStop(0, '#9fd3ff'); g.addColorStop(1, '#d7efff'); ctx.fillStyle = g; ctx.fillRect(0, 0, 1080, 1920);
+  ctx.fillStyle = '#7cc66d'; ctx.fillRect(0, 1180, 1080, 740);
+  drawStick(ctx, { hat: 'none', belt: false, cols: ['#e0392f', '#e0392f'], legW: 2.2, armW: 1.4, x: 540, y: 1180, s: 760, face: { eyes: 'wide', mouth: 'o', browUp: 1 }, arms: { L: [2.3, .7], R: [2.3, .7] } });
+  caption(540, 1335, ['went', 'black'], 96, 1);
+  ctx.restore(); frame(0, 'Stick · storia vera, your call');
+  // Solid's world
+  const solid = await load('out/copertine/solid-whoa.png');
+  ctx.save(); ctx.translate(1120, 0); rrect(ctx, 0, 0, 1080, 1920, 0); ctx.clip();
+  const g2 = ctx.createLinearGradient(0, 0, 0, 1920); g2.addColorStop(0, '#ff9a62'); g2.addColorStop(0.55, '#ffc79a'); g2.addColorStop(1, '#ffe9d6'); ctx.fillStyle = g2; ctx.fillRect(0, 0, 1080, 1920);
+  ctx.drawImage(solid, -360, 300, 1800, 1800);
+  caption(540, 1335, ['1,670', 'km/h'], 96, 0);
+  ctx.restore(); frame(1120, 'Solid · what if');
+  return cv.toDataURL('image/jpeg', 0.9);
+};
+document.fonts.load('700 40px Poppins').then(() => { window.didascalieReady = true; });
+</script></body></html>

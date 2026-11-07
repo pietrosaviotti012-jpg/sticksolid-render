@@ -1,0 +1,458 @@
+[
+ {
+  "page": "man",
+  "out": "out/scheda/solid-fermo.png",
+  "cfg": {
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "ground": true,
+   "shirt": "#2f63c9",
+   "pose": "stand",
+   "turn": -0.15,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-ciao.png",
+  "cfg": {
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "ground": true,
+   "shirt": "#2f63c9",
+   "pose": "hi",
+   "turn": -0.2,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-indica.png",
+  "cfg": {
+   "fov": 22,
+   "camPos": [
+    0,
+    1.05,
+    6.2
+   ],
+   "camLook": [
+    0,
+    0.98,
+    0
+   ],
+   "ground": true,
+   "shirt": "#2f63c9",
+   "pose": "point",
+   "turn": 0.1,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-sorriso.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.7,
+    "lid": 0.8,
+    "mouth": "smile",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-risata.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.9,
+    "tilt": 0.8,
+    "lid": 0.15,
+    "mouth": "smile",
+    "grin": 1.2,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-whoa.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 1,
+    "tilt": 0.8,
+    "lid": 1,
+    "open": 0.8,
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-paura.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 1,
+    "tilt": 1.6,
+    "lid": 1,
+    "open": 0.3,
+    "look": [
+     -0.6,
+     0
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-dubbio.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.2,
+    "tilt": 0,
+    "lid": 0.3,
+    "mouth": "flat",
+    "one": 1,
+    "look": [
+     0.5,
+     -0.3
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-pensieroso.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.4,
+    "tilt": 0.3,
+    "lid": 0.5,
+    "mouth": "flat",
+    "one": -1,
+    "look": [
+     -0.8,
+     -0.8
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-preoccupato.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.4,
+    "tilt": 1.5,
+    "lid": 0.7,
+    "mouth": "flat",
+    "look": [
+     0,
+     0.3
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-triste.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.2,
+    "tilt": 1.7,
+    "lid": -0.2,
+    "mouth": "frown",
+    "look": [
+     0,
+     0.7
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-furbo.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.3,
+    "tilt": -0.5,
+    "lid": -0.3,
+    "mouth": "smirk",
+    "look": [
+     0.6,
+     0
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-arrabbiato.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": -0.4,
+    "tilt": -1.5,
+    "lid": 0.4,
+    "mouth": "frown",
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-confuso.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0.6,
+    "tilt": 0.4,
+    "lid": 0.8,
+    "one": 1,
+    "mouth": "smirk",
+    "look": [
+     0.4,
+     -0.5
+    ],
+    "eyes": 1.35
+   }
+  }
+ },
+ {
+  "page": "man",
+  "out": "out/scheda/solid-faccia-stanco.png",
+  "cfg": {
+   "pose": "stand",
+   "ground": false,
+   "shirt": "#2f63c9",
+   "fov": 5,
+   "camPos": [
+    0,
+    1.74,
+    4.6
+   ],
+   "camLook": [
+    0,
+    1.72,
+    0
+   ],
+   "turn": -0.12,
+   "face": {
+    "brow": 0,
+    "tilt": 0.5,
+    "lid": -0.8,
+    "mouth": "flat",
+    "look": [
+     0,
+     0.4
+    ],
+    "eyes": 1.35
+   }
+  }
+ }
+]

@@ -1,0 +1,377 @@
+{
+ "_": "I temi di colore di StickSolid: uno per ogni umore della storia. stick = scena 2D (cielo dall'alto al basso, terreno, luce dietro Stick), solid = scena 3D per man.js (sky in 3 tappe, luce principale [colore, forza], controluce, riempimento dal cielo [alto, basso, forza], esposizione, nebbia [colore, da, a]). chiave = colore della parola chiave nelle didascalie. I colori dei protagonisti non cambiano mai.",
+ "giorno": {
+  "nome": "Giorno",
+  "umore": "normale, curioso: il tema di base",
+  "quando": "l'inizio di quasi ogni video, le spiegazioni, le risposte",
+  "stick": {
+   "sky": [
+    "#9fd3ff",
+    "#d7efff"
+   ],
+   "ground": "#7cc66d",
+   "light": null
+  },
+  "solid": {
+   "sky": [
+    "#ff9a62",
+    "#ffc79a",
+    "#ffe9d6"
+   ],
+   "key": [
+    "#fff1e0",
+    2.5
+   ],
+   "rim": [
+    "#ffffff",
+    1.4
+   ],
+   "hemi": [
+    "#fff4ea",
+    "#d9b49a",
+    0.9
+   ],
+   "exposure": 1.05
+  },
+  "chiave": "#ffc93c",
+  "musica": "pizzicato leggero, ottimista",
+  "suoni": "pop, fruscii brevi"
+ },
+ "notte": {
+  "nome": "Notte · mistero",
+  "umore": "misterioso, sospeso, ma non spaventoso",
+  "quando": "i misteri, i Your call all'inizio, le storie che succedono di notte",
+  "stick": {
+   "sky": [
+    "#16143a",
+    "#3a2f6b"
+   ],
+   "ground": "#3b4262",
+   "light": {
+    "kind": "moon",
+    "color": "#ffe9a8"
+   }
+  },
+  "solid": {
+   "sky": [
+    "#0f0e2a",
+    "#2b2350",
+    "#4a3b7a"
+   ],
+   "key": [
+    "#9fb4ff",
+    1.7
+   ],
+   "rim": [
+    "#ffd27a",
+    1.9
+   ],
+   "hemi": [
+    "#6f7cc7",
+    "#1a1830",
+    0.6
+   ],
+   "exposure": 0.95,
+   "fog": [
+    "#2b2350",
+    6,
+    18
+   ]
+  },
+  "chiave": "#ffc93c",
+  "musica": "tappeto basso e lento, una nota che resta",
+  "suoni": "vento, grilli, un cane lontano"
+ },
+ "cupo": {
+  "nome": "Cupo · paura",
+  "umore": "tensione, pericolo, minaccia",
+  "quando": "il momento del pericolo nei Your call, l'impatto nei What if, il punto più nero delle storie vere: 2-3 momenti per video, non di più",
+  "stick": {
+   "sky": [
+    "#1c1013",
+    "#4a1f24"
+   ],
+   "ground": "#3e2a2d",
+   "light": {
+    "kind": "lamp",
+    "color": "#ff8a6a"
+   },
+   "vignette": 0.55,
+   "tint": "#ff2a2a"
+  },
+  "solid": {
+   "sky": [
+    "#140a0c",
+    "#3b1418",
+    "#64262a"
+   ],
+   "key": [
+    "#ffb0a0",
+    1.3
+   ],
+   "rim": [
+    "#ff3b3b",
+    2.4
+   ],
+   "hemi": [
+    "#7a3a3a",
+    "#120808",
+    0.5
+   ],
+   "exposure": 0.9,
+   "fog": [
+    "#3b1418",
+    5,
+    14
+   ]
+  },
+  "chiave": "#ff5a4a",
+  "musica": "pulsazione bassa, archi tesi, silenzi prima dei colpi",
+  "suoni": "colpi sordi, ronzio, battito"
+ },
+ "triste": {
+  "nome": "Triste · tragico",
+  "umore": "malinconia, perdita, rispetto",
+  "quando": "le vittime vere, i finali amari, le storie di guerra e di disastri",
+  "stick": {
+   "sky": [
+    "#8794a6",
+    "#c8ced8"
+   ],
+   "ground": "#7f8b80",
+   "light": null,
+   "rain": true
+  },
+  "solid": {
+   "sky": [
+    "#5b6676",
+    "#8f9aa8",
+    "#cfd5dc"
+   ],
+   "key": [
+    "#e3e8f0",
+    1.6
+   ],
+   "rim": [
+    "#c8d2e0",
+    1
+   ],
+   "hemi": [
+    "#aeb7c4",
+    "#5a5f66",
+    0.8
+   ],
+   "exposure": 0.95,
+   "fog": [
+    "#8f9aa8",
+    7,
+    20
+   ]
+  },
+  "chiave": "#ffffff",
+  "musica": "pianoforte lento, poche note",
+  "suoni": "pioggia, vento leggero; niente pop allegri"
+ },
+ "allegro": {
+  "nome": "Allegro · comico",
+  "umore": "divertente, assurdo, leggero",
+  "quando": "le storie buffe (la grande bufala della Luna), i What if assurdi, le battute",
+  "stick": {
+   "sky": [
+    "#7fd0ff",
+    "#fff3b0"
+   ],
+   "ground": "#6ad15a",
+   "light": {
+    "kind": "sun",
+    "color": "#fff1a0"
+   }
+  },
+  "solid": {
+   "sky": [
+    "#ffb938",
+    "#ffd77a",
+    "#fff1cc"
+   ],
+   "key": [
+    "#fff6e0",
+    2.7
+   ],
+   "rim": [
+    "#ffffff",
+    1.6
+   ],
+   "hemi": [
+    "#fff8e6",
+    "#e0c27a",
+    1
+   ],
+   "exposure": 1.08
+  },
+  "chiave": "#e0392f",
+  "musica": "ukulele, fischietto, rimbalzi",
+  "suoni": "boing, pop, fischi da cartone"
+ },
+ "spazio": {
+  "nome": "Spazio · scienza",
+  "umore": "meraviglia, scala enorme, il cosmo",
+  "quando": "i What if con il Sole, la Luna, le stelle, la gravità, e le spiegazioni scientifiche",
+  "stick": {
+   "sky": [
+    "#070920",
+    "#1b2a5a"
+   ],
+   "ground": "#3c4260",
+   "light": {
+    "kind": "planet",
+    "color": "#8fd8ff"
+   },
+   "stars": true
+  },
+  "solid": {
+   "sky": [
+    "#04050d",
+    "#0f1838",
+    "#26306a"
+   ],
+   "key": [
+    "#ffffff",
+    2.2
+   ],
+   "rim": [
+    "#5ff3ff",
+    2.2
+   ],
+   "hemi": [
+    "#5a6bb0",
+    "#05060f",
+    0.5
+   ],
+   "exposure": 1
+  },
+  "chiave": "#5ff3ff",
+  "musica": "synth larghi, note lunghe",
+  "suoni": "risonanze profonde, sibili spaziali"
+ },
+ "fuoco": {
+  "nome": "Caldo · fuoco",
+  "umore": "calore, esplosione, deserto, urgenza",
+  "quando": "incendi, eruzioni, esplosioni, il Sole troppo vicino, il deserto",
+  "stick": {
+   "sky": [
+    "#ff6a2a",
+    "#ffd27a"
+   ],
+   "ground": "#d9a35a",
+   "light": {
+    "kind": "sun",
+    "color": "#fff0b0"
+   }
+  },
+  "solid": {
+   "sky": [
+    "#b8301a",
+    "#ff7a3d",
+    "#ffd08a"
+   ],
+   "key": [
+    "#ffd2a0",
+    2.6
+   ],
+   "rim": [
+    "#ff5a1f",
+    2.2
+   ],
+   "hemi": [
+    "#ffb070",
+    "#7a3010",
+    0.8
+   ],
+   "exposure": 1,
+   "fog": [
+    "#ff7a3d",
+    8,
+    22
+   ]
+  },
+  "chiave": "#fff3b0",
+  "musica": "percussioni, tamburi bassi",
+  "suoni": "fuoco che crepita, boati, sibili"
+ },
+ "freddo": {
+  "nome": "Freddo · ghiaccio e mare",
+  "umore": "gelo, oceano, silenzio bianco",
+  "quando": "il ghiaccio, la neve, il mare aperto, i poli, la Terra che si raffredda",
+  "stick": {
+   "sky": [
+    "#a9e2ff",
+    "#f2fbff"
+   ],
+   "ground": "#e8f4fb",
+   "light": null,
+   "snow": true
+  },
+  "solid": {
+   "sky": [
+    "#6fcfff",
+    "#c4ecff",
+    "#f2fbff"
+   ],
+   "key": [
+    "#eaf6ff",
+    2.2
+   ],
+   "rim": [
+    "#bfe9ff",
+    1.6
+   ],
+   "hemi": [
+    "#e8f6ff",
+    "#9fc2d6",
+    1
+   ],
+   "exposure": 1.02
+  },
+  "chiave": "#ffc93c",
+  "musica": "campanelli lenti, tappeto chiaro",
+  "suoni": "vento gelido, ghiaccio che scricchiola, onde"
+ },
+ "antico": {
+  "nome": "Antico · storia",
+  "umore": "il passato, le date, i documenti",
+  "quando": "l'anno e il posto delle storie vere, i flashback, i documenti d'epoca",
+  "stick": {
+   "sky": [
+    "#e9d3a6",
+    "#f6ead0"
+   ],
+   "ground": "#c9a46a",
+   "light": null,
+   "paper": true
+  },
+  "solid": {
+   "sky": [
+    "#b98c4f",
+    "#e3c48e",
+    "#f5e6c4"
+   ],
+   "key": [
+    "#ffe1b0",
+    2.3
+   ],
+   "rim": [
+    "#fff0d0",
+    1.3
+   ],
+   "hemi": [
+    "#f5e6c4",
+    "#8a6a3a",
+    0.9
+   ],
+   "exposure": 1
+  },
+  "chiave": "#8a3a1a",
+  "musica": "clavicembalo o archi d'epoca, piano",
+  "suoni": "carta, penna d'oca, campane lontane"
+ }
+}

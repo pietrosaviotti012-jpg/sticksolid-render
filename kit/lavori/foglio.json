@@ -1,0 +1,5 @@
+[{ "page": "compose", "fn": "renderSheet", "out": "out/foglio-profilo.jpg", "cfg": { "items": [
+  { "src": "out/esempio-1.png", "label": "1 · Ciao!" },
+  { "src": "out/esempio-2.png", "label": "2 · Whoa" },
+  { "src": "out/esempio-3.png", "label": "3 · Amici" },
+  { "src": "out/esempio-4.png", "label": "4 · Guarda lui" } ] } }]
