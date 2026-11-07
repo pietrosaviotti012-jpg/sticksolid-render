@@ -129,10 +129,13 @@ class Prod:
 
     # ---- 6. the mix: picture + voice, then the closing card with the signature sound
     def mix(self):
-        body = os.path.join(self.out, "corpo.mp4")
-        run(["ffmpeg", "-y", "-v", "error", "-i", os.path.join(self.out, "muto.mp4"), "-i", self.vo,
-             "-filter_complex", "[0:v]scale=1080:1920:flags=lanczos,fps=30,format=yuv420p[v];[1:a]aresample=48000,apad[a]",
-             "-map", "[v]", "-map", "[a]", "-shortest", "-c:v", "libx264", "-crf", "18", "-c:a", "aac", "-b:a", "192k", body])
+        body = os.path.join(self.out, "corpo.mp4"); muto = os.path.join(self.out, "muto.mp4")
+        # the length is the picture's, given explicitly: with an older ffmpeg (GitHub's Ubuntu) "apad" + "-shortest"
+        # never stopped and padded silence until the disk was full
+        dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", muto]).strip())
+        run(["ffmpeg", "-y", "-v", "error", "-i", muto, "-i", self.vo,
+             "-filter_complex", f"[0:v]scale=1080:1920:flags=lanczos,fps=30,format=yuv420p[v];[1:a]aresample=48000,apad=whole_dur={dur:.3f}[a]",
+             "-map", "[v]", "-map", "[a]", "-t", f"{dur:.3f}", "-c:v", "libx264", "-crf", "18", "-c:a", "aac", "-b:a", "192k", body])
 
     # ---- 7. the sound effects (Real SFX): sounds tied to words, plus a light whoosh on every cut of the shots
     def suoni(self):
