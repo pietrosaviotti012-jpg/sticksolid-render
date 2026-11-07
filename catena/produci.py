@@ -289,8 +289,41 @@ class Prod:
             f = self.fatti(); rep["fatti"] = f
             if f["voci"] < 2: ko.append(f"fonti: {f['voci']} in copione.md (ne servono almeno 2)")
             elif f["senza_link"]: print(f"  fatti: {f['voci']} fonti, {f['senza_link']} senza link (da aggiungere prima di pubblicare)")
-            json.dump(rep, open(os.path.join(self.out, "controllo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        # "Ritmo" (phase 4): on our 20 old videos, the hold at 3 s on TikTok went with the pace of the picture, not with
+        # the words of the hook (studio/research/predictor/RISULTATO.md). Measured on every video, given as advice
+        # (it never stops a video); the weekly Analisi compares it with the real numbers until there is data for a
+        # predictor of our own.
+        rep["ritmo"] = rt = self.ritmo()
+        print(f"  ritmo: {rt['tagli_10s']} tagli ogni 10 s, primo taglio a {rt['primo_taglio']} s, inquadratura mediana {rt['inq_mediana']} s, "
+              f"movimento nei primi 3 s {rt['movimento_3s']} (nel resto {rt['movimento']})")
+        for c in rt["consigli"]: print(f"    consiglio: {c}")
+        json.dump(rep, open(os.path.join(self.out, "controllo.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         print("  CONTROLLO:", "NON PASSA · " + "; ".join(ko) if ko else "passa")
+
+    # what the 5 old videos in the new style did (45-52% still there at 3 s on TikTok); see RISULTATO.md
+    RITMO = {"tagli_10s": 2.5, "primo_taglio": 3.0, "inq_mediana": 4.0}
+
+    def ritmo(self):
+        """the pace of the body (closing card excluded): the cuts come from the shots (shots.js through the time warp),
+        the movement is how much the picture changes from one frame to the next (0-255, frames at 90x160 in grey)"""
+        cat = json.load(open(os.path.join(self.proj, "catena.json"), encoding="utf-8"))
+        dur = cat["duration"]; cuts = sorted(t for t in self.tagli(cat) if 0 < t < dur)
+        edges = [0.0] + cuts + [dur]; shots = sorted(b - a for a, b in zip(edges, edges[1:]))
+        body = os.path.join(self.out, "corpo.mp4")
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", body, "-t", f"{dur:.2f}", "-vf", "scale=90:160,fps=30,format=gray", "-f", "rawvideo", "-"],
+                             capture_output=True, check=True).stdout
+        import numpy as np                                                              # noqa: E402
+        f = np.frombuffer(raw, np.uint8).reshape(-1, 160 * 90).astype(np.int16)
+        d = np.abs(np.diff(f, axis=0)).mean(1) if len(f) > 1 else np.zeros(1)
+        rt = {"tagli_10s": round(len(cuts) / dur * 10, 2), "primo_taglio": round(cuts[0], 2) if cuts else None,
+              "inq_mediana": round(shots[len(shots) // 2], 2), "movimento_3s": round(float(d[:90].mean()), 2), "movimento": round(float(d[90:].mean()), 2)}
+        R, cons = self.RITMO, []
+        if rt["tagli_10s"] < R["tagli_10s"]: cons.append(f"pochi tagli: {rt['tagli_10s']} ogni 10 s, i video nuovi migliori ne hanno almeno {R['tagli_10s']}")
+        if rt["primo_taglio"] is None or rt["primo_taglio"] > R["primo_taglio"]: cons.append(f"il primo taglio arriva tardi ({rt['primo_taglio']} s): meglio entro {R['primo_taglio']} s")
+        if rt["inq_mediana"] > R["inq_mediana"]: cons.append(f"inquadrature lunghe: la mediana è {rt['inq_mediana']} s, meglio sotto {R['inq_mediana']} s")
+        if rt["movimento_3s"] < rt["movimento"] * 0.8: cons.append("nei primi 3 secondi l'immagine si muove meno che nel resto del video: il gancio deve essere già in azione")
+        rt["consigli"] = cons
+        return rt
 
     def fatti(self):
         """the sources section of copione.md: how many facts are listed and how many have no link"""
