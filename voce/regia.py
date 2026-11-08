@@ -81,8 +81,12 @@ def dirigi(lines, cupo=False):
 
 
 def piano(lines, extra=None, cupo=False):
-    """the automatic plan, with project/regia.json on top"""
-    auto = dirigi(lines, cupo)
+    """the automatic plan, with project/regia.json on top. A line can be a dict (a character's line in a Your Call:
+    {"text", "voice", "fx": "radio" | "whisper"}): it gets a plain plan marked "personaggio", read without the direction"""
+    texts = [ln if isinstance(ln, str) else ln.get("text", "") for ln in lines]
+    auto = dirigi(texts, cupo)
+    for i, ln in enumerate(lines):
+        if not isinstance(ln, str): auto[i] = {"tono": "normale", "enfasi": [], "velocita": 1.0, "personaggio": True}
     for i, e in enumerate(extra or []):
         if i < len(auto) and e: auto[i] = {**auto[i], **e, "auto": False}
     for p in auto:

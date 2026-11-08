@@ -86,7 +86,7 @@ def make(lines, out, voice="am_puck", speed=1.15, raw=False, master="creator", r
         sp = ln.get("speed", speed) * (p["velocita"] if p else 1)
         if p: sp = min(sp, 1.2)                                          # faster than 1.2 Kokoro starts to swallow words
         s, sr = say(ln["text"], ln.get("voice", voice), sp, raw)
-        if p:
+        if p and not p.get("personaggio"):                               # a character's line (radio, whisper) keeps its own voice
             from regia import prosodia
             s = prosodia(s, sr, p, ln["text"] if raw else normalizza(ln["text"]))
             if p["pausa_prima"] and parts: parts.append(np.zeros(int(p["pausa_prima"] * sr), dtype=np.float32)); t += p["pausa_prima"]
