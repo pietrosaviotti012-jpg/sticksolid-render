@@ -7,7 +7,10 @@
 #
 # Needs one secret, created by the user: STUDIO_READ_TOKEN, a fine-grained token with read-only access ("Contents:
 # read") to sticksolid-studio. The production is read with it and never written back.
-# The finished video stays an artifact (14 days) until Approva: it goes to a Release only when the user approves it.
+# The finished video stays an artifact (14 days) and goes into a DRAFT release (private: only readable with a token), from
+# which the Office (the StickSolid Studio Worker) shows it in Approva and publishes it.
+# The Office hears about every stage through catena/ufficio.py, with two more secrets: OFFICE_URL and STUDIO_SECRET
+# (without them the render works the same and only the Office stays quiet).
 #
 # Start: Actions -> render -> Run workflow (video = the production id, e.g. storia-1),
 #        or a repository_dispatch of type "render" with {"video": "storia-1"} (the routines and the new Office).
@@ -35,6 +38,8 @@ env:
   STICKSOLID_KIT: ${{ github.workspace }}/render/skills/kit
   REAL_SFX: ${{ github.workspace }}/studio/skills-esterne/real-sfx
   SLICES: 6
+  OFFICE_URL: ${{ secrets.OFFICE_URL }}
+  STUDIO_SECRET: ${{ secrets.STUDIO_SECRET }}
 
 jobs:
   voce:
@@ -76,8 +81,14 @@ jobs:
         run: |
           bash render/skills/kit/setup.sh --voice
           render/skills/kit/.venv/bin/pip install -q praat-parselmouth
+      - name: Tell the Office the video starts
+        run: python3 render/catena/ufficio.py "studio/productions/$VIDEO" inizio
       - name: Voce, parole, didascalie, tempi
         run: set -o pipefail; cd render && "$STICKSOLID_KIT/.venv/bin/python" -u catena/produci.py "../studio/productions/$VIDEO" --fino tempi
+      - name: Tell the Office the voice is done
+        run: |
+          python3 render/catena/ufficio.py "studio/productions/$VIDEO" reparto voce done "Voce pronta, con la regia"
+          python3 render/catena/ufficio.py "studio/productions/$VIDEO" reparto render working "Sei macchine disegnano i fotogrammi"
       - name: How many frames
         id: frames
         run: |
@@ -134,6 +145,8 @@ jobs:
           echo "fotogrammi $FRAME_FROM-$FRAME_TO di $N ($WHO)"
           mkdir -p segs
           node "render/engines/$WHO/render.mjs" "studio/productions/$VIDEO/project" video "segs/seg_${{ matrix.slice }}.mp4" 30
+      - name: Tell the Office this machine has finished
+        run: python3 render/catena/ufficio.py "studio/productions/$VIDEO" fetta ${{ matrix.slice }}
       - uses: actions/upload-artifact@v4
         with:
           name: seg-${{ matrix.slice }}
@@ -144,6 +157,8 @@ jobs:
     needs: [voce, frames]
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    permissions:
+      contents: write          # the draft release with the finished video
     steps:
       - uses: actions/checkout@v4
         with:
@@ -192,12 +207,24 @@ jobs:
           O="studio/productions/$VIDEO/out"; mkdir -p "$O"
           for i in $(seq 0 $((SLICES - 1))); do echo "file '$PWD/segs/seg_$i.mp4'"; done > segs/list.txt
           ffmpeg -y -v error -f concat -safe 0 -i segs/list.txt -c copy "$O/muto.mp4"
+      - name: Tell the Office the sounds are at work
+        run: python3 render/catena/ufficio.py "studio/productions/$VIDEO" reparto suoni working "I suoni sulle parole, la chiusura, il controllo"
       - name: Mix, suoni, finale, copertina, provini, controllo
         run: |
           set -o pipefail                                  # an error in the chain must fail the job, not get lost in tee
           cd render
           "$STICKSOLID_KIT/.venv/bin/python" -u catena/produci.py "../studio/productions/$VIDEO" --da mix | tee ../controllo.log
           grep -q "CONTROLLO: passa" ../controllo.log || echo "::warning::il controllo qualità non passa, vedi controllo.json"
+      - name: The draft release (private until Approva), and the video to Approva
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          O="studio/productions/$VIDEO/out"; TAG="video-$VIDEO-${{ github.run_id }}"
+          gh release create "$TAG" --draft --repo "${{ github.repository }}" --title "$VIDEO (bozza, da approvare)" \
+            --notes "Fatto da render.yml, run ${{ github.run_id }}. Bozza privata: diventa pubblica solo dopo Approva." \
+            "$O/$VIDEO.mp4" "$O/copertina.png" "$O/provini.jpg" "$O/controllo.json"
+          python3 render/catena/ufficio.py "studio/productions/$VIDEO" reparto suoni done "Suoni e chiusura pronti"
+          python3 render/catena/ufficio.py "studio/productions/$VIDEO" pronto "$TAG"
       - uses: actions/upload-artifact@v4
         with:
           name: video-${{ env.VIDEO }}
@@ -209,3 +236,25 @@ jobs:
             studio/productions/${{ env.VIDEO }}/out/regia.json
             studio/productions/${{ env.VIDEO }}/out/sfx/critica.md
           retention-days: 14
+
+  # something stopped: the Office shows a red card and sends a notification
+  fermo:
+    needs: [voce, frames, finale]
+    if: failure()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: render
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.STUDIO_REPO }}
+          token: ${{ secrets.STUDIO_READ_TOKEN }}
+          path: studio
+          sparse-checkout: |
+            productions/${{ env.VIDEO }}
+      - name: Tell the Office where it stopped
+        run: |
+          STEP=${{ needs.voce.result != 'success' && 'voce' || needs.frames.result != 'success' && 'frames' || 'finale' }}
+          python3 render/catena/ufficio.py "studio/productions/$VIDEO" fermo "$STEP" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

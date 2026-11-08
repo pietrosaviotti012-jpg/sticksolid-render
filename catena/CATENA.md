@@ -70,6 +70,8 @@ La stessa catena, divisa su più macchine.
 
 Le istruzioni sono in `sticksolid-studio/routines/COPIONE-E-SCENE.md`.
 
+**L'Ufficio** (StickSolid Studio) sa tutto da `catena/ufficio.py`, che `render.yml` chiama a ogni passo: l'inizio, la voce, ognuna delle 6 macchine, i suoni, il video in Approva e dove si è fermato. Il video finito va anche in una **release in bozza**, privata, da cui l'Ufficio lo prende con la sua chiave; diventa pubblico solo dopo Approva. Servono i segreti `OFFICE_URL` e `STUDIO_SECRET`; senza, l'Ufficio resta zitto e il render va avanti uguale.
+
 **Provato il 7 novembre su True Story #1**: circa 7 minuti per video (voce 2, fotogrammi 1-1,5 su 6 macchine, finale 3-4), con gli stessi numeri del PC. Funziona sia avviato a mano sia avviato da `avvia-render` del repository privato.
 
 ## La fase 3 è finita (7 novembre 2026)
