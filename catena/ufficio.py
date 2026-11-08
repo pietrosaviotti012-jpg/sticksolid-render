@@ -4,7 +4,7 @@
     python ufficio.py <production> reparto <id> <working|done|error> [text]
     python ufficio.py <production> fetta <n>         one of the six frame machines has finished
     python ufficio.py <production> pronto <tag>      the video is finished: it goes to Approva (the files are in the draft release <tag>)
-    python ufficio.py <production> fermo <step> <url> the chain stopped at a step (a red card and a notification)
+    python ufficio.py <production> fermo <step> <url> [log] the chain stopped at a step: the Regista restarts it, or explains why
 
 It needs OFFICE_URL and STUDIO_SECRET in the environment (GitHub secrets of this repository). Without them it says so and
 does nothing: the render never fails because the Office cannot be reached. No key is ever printed.
@@ -23,6 +23,39 @@ def send(event):
         with urllib.request.urlopen(req, timeout=20) as r: print("ufficio:", r.status, list(event))
     except Exception as e:                                                       # never stop the render for this
         print("ufficio: non raggiungibile:", str(e)[:120])
+
+
+PASSI = {"voce": "la voce e i tempi delle parole", "frames": "i fotogrammi (le 6 macchine)", "finale": "suoni, chiusura, copertina e controllo"}
+# what an error in the log means, in plain Italian, and what to do: the first rule that matches wins
+REGOLE = [
+    (r"No space left on device", "La macchina di GitHub ha finito lo spazio sul disco: di solito un file che cresce senza fermarsi (era successo con l'audio del mix).",
+     "Va cercato il passo che scrive troppo: rifarlo partire così non basta."),
+    (r"Bad credentials|HTTP 401|HTTP 403|Resource not accessible|could not read Username|Repository not found",
+     "GitHub ha rifiutato una chiave: un token è scaduto o non ha il permesso giusto.", "Va rinnovato il token (STUDIO_READ_TOKEN o simili): lo fai tu, nelle impostazioni di GitHub."),
+    (r"timed out|exceeded the maximum execution time|The job running on runner .* has exceeded",
+     "Ci ha messo troppo e ha superato il tempo massimo della macchina.", "Spesso basta riprovare; se succede ancora, il video è troppo lungo o una scena è troppo pesante."),
+    (r"\[pageerror\]", "Le scene del video hanno un errore: il disegno si è fermato dentro il browser.",
+     "Va corretto il file delle scene (shots.js) del video: è un lavoro per la routine Copione e Scene."),
+    (r"(KeyError|AttributeError|TypeError|NameError|IndexError|ValueError|SyntaxError)[:(]",
+     "Si è fermato per un errore nel codice della catena: il video ha qualcosa che la catena non sa ancora gestire.",
+     "Va corretta la catena (sticksolid-render): riprovare uguale darebbe lo stesso errore."),
+    (r"FileNotFoundError|No such file|ENOENT", "Mancava un file che la catena si aspettava (per esempio meta.json o il copione).",
+     "Va controllata la cartella del video nel repository privato."),
+    (r"tar: Error is not recoverable|Unexpected EOF in archive|xz: .*(corrupt|truncated)|gzip: stdin",
+     "Un file scaricato da internet non è arrivato intero (di solito il programma video ffmpeg).", "È un problema passeggero: basta riprovare."),
+    (r"Could not resolve|ENOTFOUND|ECONNRESET|HTTP 50[0-9]|rate limit|Temporary failure",
+     "Un servizio esterno non ha risposto (GitHub o un download).", "Di solito basta riprovare."),
+]
+
+
+def spiega(log, step):
+    """the reason of a stop, in plain words, and the last lines of the error (for whoever wants to look)"""
+    lines = [re.sub(r"^[^\t]*\t[^\t]*\t\S+Z ", "", l) for l in log.splitlines()]   # "job<TAB>step<TAB>time text" -> "text"
+    err = [l for l in lines if re.search(r"Error|Traceback|error:|##\[error\]|Errno|exit code", l) and not re.search(r"DeprecationWarning|Failed to load resource", l)]
+    tail = "\n".join((err[-8:] if err else lines[-8:]))[-1500:]
+    for rx, cosa, fare in REGOLE:
+        if re.search(rx, log): return f"Si è fermato a: {PASSI.get(step, step)}. {cosa} {fare}", tail
+    return f"Si è fermato a: {PASSI.get(step, step)}. Non conosco questo errore: le ultime righe del registro sono qui sotto.", tail
 
 
 def meta(prod):
@@ -69,5 +102,8 @@ if __name__ == "__main__":
               "render": {"video": m["id"], "done": 6}})
     elif what == "fermo":
         step, url = rest[0], rest[1] if len(rest) > 1 else ""
-        send({"chain": {"ok": False, "id": m["id"], "step": step, "url": url}, "dept": "render" if step == "frames" else "voce" if step == "voce" else "controllo",
-              "status": "error", "task": f"Si è fermato a {step}", "video_id": m["id"]})
+        log = open(rest[2], encoding="utf-8", errors="ignore").read() if len(rest) > 2 and os.path.exists(rest[2]) else ""
+        spiegazione, righe = spiega(log, step)
+        dept = "render" if step == "frames" else "voce" if step == "voce" else "controllo"
+        send({"chain": {"ok": False, "id": m["id"], "step": step, "url": url}, "dept": dept, "status": "error", "video_id": m["id"],
+              "task": f"Si è fermato: {PASSI.get(step, step)}", "why": {"spiegazione": spiegazione, "righe": righe, "url": url, "passo": step}})
