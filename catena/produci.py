@@ -230,10 +230,13 @@ class Prod:
         vdur = lambda f: float(subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "format=duration",
                                                         "-of", "csv=p=0", f]).strip())
         db, dc = vdur(body), vdur(clos)
-        run(["ffmpeg", "-y", "-v", "error", "-i", body, "-i", clos, "-filter_complex",
-             "[0:v]fps=30,format=yuv420p,setsar=1[v0];[1:v]scale=1080:1920,fps=30,format=yuv420p,setsar=1[v1];"
-             f"[0:a]aresample=48000,aformat=channel_layouts=stereo,atrim=end={db:.3f},apad=whole_dur={db:.3f}[a0];"
-             f"[1:a]aresample=48000,aformat=channel_layouts=stereo,atrim=end={dc:.3f},apad=whole_dur={dc:.3f}[a1];"
+        # -nostdin: on GitHub ffmpeg must never wait for the keyboard; every stream starts again from zero (setpts/asetpts),
+        # and the progress is printed every 15 s, so a slow join shows where it is
+        run(["ffmpeg", "-nostdin", "-y", "-v", "warning", "-stats_period", "15", "-stats", "-i", body, "-i", clos, "-filter_complex",
+             f"[0:v]setpts=PTS-STARTPTS,fps=30,trim=end={db:.3f},format=yuv420p,setsar=1[v0];"
+             f"[1:v]setpts=PTS-STARTPTS,scale=1080:1920,fps=30,trim=end={dc:.3f},format=yuv420p,setsar=1[v1];"
+             f"[0:a]asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,atrim=end={db:.3f},apad=whole_dur={db:.3f}[a0];"
+             f"[1:a]asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,atrim=end={dc:.3f},apad=whole_dur={dc:.3f}[a1];"
              "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]", "-t", f"{db + dc + 0.5:.3f}",
              "-c:v", "libx264", "-crf", "20", "-preset", "medium", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", final], timeout=600)
 
