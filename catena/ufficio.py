@@ -33,7 +33,7 @@ REGOLE = [
     (r"Bad credentials|HTTP 401|HTTP 403|Resource not accessible|could not read Username|Repository not found",
      "GitHub ha rifiutato una chiave: un token è scaduto o non ha il permesso giusto.", "Va rinnovato il token (STUDIO_READ_TOKEN o simili): lo fai tu, nelle impostazioni di GitHub."),
     (r"Chromium: tentativo 3", "Il browser che disegna i fotogrammi non si è installato sulla macchina di GitHub.", "È un problema passeggero: basta riprovare."),
-    (r"timed out|exceeded the maximum execution time|The job running on runner .* has exceeded",
+    (r"timed out|TimeoutExpired|The operation was canceled|exceeded the maximum execution time|The job running on runner .* has exceeded",
      "Ci ha messo troppo e ha superato il tempo massimo della macchina.", "Spesso basta riprovare; se succede ancora, il video è troppo lungo o una scena è troppo pesante."),
     (r"\[pageerror\]", "Le scene del video hanno un errore: il disegno si è fermato dentro il browser.",
      "Va corretto il file delle scene (shots.js) del video: è un lavoro per la routine Copione e Scene."),

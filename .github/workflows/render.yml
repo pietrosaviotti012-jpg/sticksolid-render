@@ -237,7 +237,7 @@ jobs:
   # something stopped: the Office shows a red card and sends a notification
   fermo:
     needs: [voce, frames, finale]
-    if: failure()
+    if: failure() || cancelled()     # a job stopped by its time limit counts as "cancelled", and the Regista must hear of it too
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
@@ -260,4 +260,5 @@ jobs:
         run: |
           STEP=${{ needs.voce.result != 'success' && 'voce' || needs.frames.result != 'success' && 'frames' || 'finale' }}
           gh run view ${{ github.run_id }} --repo "${{ github.repository }}" --log-failed > errore.log 2>/dev/null || true
+          [ -s errore.log ] || gh run view ${{ github.run_id }} --repo "${{ github.repository }}" --log 2>/dev/null | tail -n 400 > errore.log || true
           python3 render/catena/ufficio.py "studio/productions/$VIDEO" fermo "$STEP" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" errore.log
