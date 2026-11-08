@@ -94,7 +94,9 @@ if __name__ == "__main__":
         item = {"id": m["id"], "title": m.get("title", m["id"]), "caption": (m.get("caption", "") + "\n\n" + " ".join(hashtags)).strip(),
                 "hashtags": hashtags, "platforms": ["YouTube", "Instagram", "TikTok"], "formato": m.get("formato"), "numero": m.get("numero"),
                 "who": m.get("who"), "part": m.get("parte"), "controllo": ctrl, "ai_label": m.get("ai_label", True),
-                "preview_url": a.get(f"{m['id']}.mp4", ""), "cover_url": a.get("copertina.png", ""), "release": tag}
+                "preview_url": a.get(f"{m['id']}.mp4", ""), "cover_url": a.get("copertina.png", ""), "release": tag,
+                # the studio's review (routines/REVISIONE.md) looks at the frames before the user does; without its pack it cannot
+                "revisione": {"stato": "in attesa" if os.environ.get("REVISIONE_PACCO") == "ok" else "senza pacchetto"}}
         passa = re.search(r"CONTROLLO: passa", open(os.path.join(out, "..", "..", "..", "..", "controllo.log"), encoding="utf-8", errors="ignore").read()) \
             if os.path.exists(os.path.join(out, "..", "..", "..", "..", "controllo.log")) else None
         send({"dept": "controllo", "status": "done", "video_id": m["id"],
