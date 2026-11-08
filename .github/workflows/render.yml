@@ -129,8 +129,11 @@ jobs:
           node-version: 20
       - name: ffmpeg (a recent static build, like the PC's; retries and a spare source)
         run: bash render/catena/ci_ffmpeg.sh
-      - name: three.js, Playwright and Chromium
-        run: cd render/skills/kit && npm install --silent --no-audit --no-fund && npx --yes playwright install --with-deps chromium >/dev/null
+      - name: three.js, Playwright and Chromium (at most 4 minutes a try, 3 tries; a machine once hung here for half an hour)
+        timeout-minutes: 14
+        run: |
+          cd render/skills/kit && npm install --silent --no-audit --no-fund
+          for n in 1 2 3; do timeout 240 npx --yes playwright install --with-deps chromium >/dev/null && exit 0; echo "Chromium: tentativo $n non riuscito"; done; exit 1
       - name: Slice ${{ matrix.slice }}
         env:
           N: ${{ needs.voce.outputs.frames }}
