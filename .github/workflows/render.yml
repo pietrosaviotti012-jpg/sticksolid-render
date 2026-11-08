@@ -259,6 +259,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           STEP=${{ needs.voce.result != 'success' && 'voce' || needs.frames.result != 'success' && 'frames' || 'finale' }}
-          gh run view ${{ github.run_id }} --repo "${{ github.repository }}" --log-failed > errore.log 2>/dev/null || true
-          [ -s errore.log ] || gh run view ${{ github.run_id }} --repo "${{ github.repository }}" --log 2>/dev/null | tail -n 400 > errore.log || true
+          # the run is still going (this job is part of it), so its whole log is not ready yet: read the log of each job that stopped
+          : > errore.log
+          for J in $(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/jobs" --jq '.jobs[] | select(.conclusion=="failure" or .conclusion=="cancelled" or .conclusion=="timed_out") | .id' 2>/dev/null); do
+            { gh api --allow-escape-sequences "repos/${{ github.repository }}/actions/jobs/$J/logs" 2>/dev/null || gh api "repos/${{ github.repository }}/actions/jobs/$J/logs" 2>/dev/null; } | tail -n 300 >> errore.log || true
+          done
+          wc -l errore.log
           python3 render/catena/ufficio.py "studio/productions/$VIDEO" fermo "$STEP" "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" errore.log
