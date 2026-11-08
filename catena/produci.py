@@ -51,7 +51,9 @@ class Prod:
         v = self.meta.get("voce", {})
         # the direction (voce/regia.py): the automatic director, with project/regia.json on top; "regia": false in meta.voce = flat
         plan = None
-        if v.get("regia", True):
+        # 8 November: the user chose voice "B" in the blind test (same voice and speed, WITHOUT the Praat retouching, which made it
+        # sound robotic). The direction is now off unless a video asks for it with "regia": true in meta.voce
+        if v.get("regia", False):
             import regia as R                                                          # noqa: E402
             rj = os.path.join(self.proj, "regia.json")
             plan = R.piano(lines, json.load(open(rj, encoding="utf-8")) if os.path.exists(rj) else None, cupo=v.get("master") == "cupo")

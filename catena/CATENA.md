@@ -30,6 +30,8 @@ Gli errori trovati nei video e i controlli che li bloccano sono in `sticksolid-s
 
 ## La regia della voce
 
+> **Spenta dall'8 novembre.** Nella prova alla cieca l'utente ha scelto la voce **B**: stessa voce e stessa velocità, senza il ritocco di Praat, che la rendeva robotica. La regia si usa solo se un video la chiede con `"regia": true` in `meta.voce`. Il resto di questa sezione spiega come funziona, per quando servirà.
+
 Kokoro legge ogni frase allo stesso modo. La regia (`voce/regia.py`) decide come dire ogni frase, poi modifica l'audio con Praat: allarga la melodia, accenta le parole chiave (più alte, un po' più lunghe e più forti), accelera o rallenta pezzi di frase e mette brevi silenzi a effetto.
 - **I toni**: `gancio`, `normale`, `svolta` (il "But": pausa prima, più basso), `fatto` (il numero lento e accentato), `elenco` (veloce), `climax`, `calmo`, `domanda`, `cta`, `cupo`.
 - **Chi la scrive**: la routine del copione, in `project/regia.json` (una riga per frase: `tono`, `enfasi`, `veloci`, `lenti`, `beat`, `velocita`…). Se il file manca, decide la regia automatica, che segue regole sul testo. Quello che è stato usato davvero finisce in `out/regia.json`.
