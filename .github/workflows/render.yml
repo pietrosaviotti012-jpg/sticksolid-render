@@ -224,7 +224,7 @@ jobs:
           git add "productions/$VIDEO/revisione"
           git commit -q -m "revisione: il pacchetto di $VIDEO (render ${{ github.run_id }})" || { echo "REVISIONE_PACCO=ok" >> "$GITHUB_ENV"; exit 0; }
           for i in 1 2 3; do
-            if git pull -q --rebase origin main && git push -q origin HEAD:main; then echo "pacchetto nel repository privato"; echo "REVISIONE_PACCO=ok" >> "$GITHUB_ENV"; exit 0; fi
+            if git pull -q --rebase --autostash origin main && git push -q origin HEAD:main; then echo "pacchetto nel repository privato"; echo "REVISIONE_PACCO=ok" >> "$GITHUB_ENV"; exit 0; fi
             sleep $((i * 5))
           done
           echo "::warning::il pacchetto della revisione non è arrivato nel repository privato: STUDIO_READ_TOKEN deve avere Contents: read and write"
