@@ -59,7 +59,8 @@ class Prod:
             plan = R.piano(lines, json.load(open(rj, encoding="utf-8")) if os.path.exists(rj) else None, cupo=v.get("master") == "cupo")
             json.dump(plan, open(os.path.join(self.out, "regia.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
             for ln, p in zip(lines, plan): print(f"  {p['tono']:8} v{p['velocita']:.2f} {p['tono_st']:+.1f}st enfasi={p.get('enfasi')} | {(ln if isinstance(ln, str) else ln.get('text', ''))[:50]}")
-        _, dur = V.make(lines, self.vo, v.get("voice", "am_puck+am_onyx:0.7"), v.get("speed", 1.15), master=v.get("master", "creator"), regia=plan)
+        _, dur = V.make(lines, self.vo, v.get("voice", "am_puck+am_onyx:0.7"), v.get("speed", 1.15), master=v.get("master", "creator"), regia=plan,
+                         eleven_voice=v.get("eleven"))
         for f in glob.glob(os.path.join(self.out, "*.raw.wav")): os.remove(f)
         print(f"  voce {dur:.1f} s")
 
@@ -68,7 +69,7 @@ class Prod:
         # the kit's words.py wants the lines as plain text: the characters' lines of a Your Call ({"text", "voice", "fx"}) are flattened
         lines = json.load(open(os.path.join(self.proj, "script.json"), encoding="utf-8"))
         flat = os.path.join(self.out, "script-testo.json")
-        json.dump([ln if isinstance(ln, str) else ln.get("text", "") for ln in lines], open(flat, "w", encoding="utf-8"), ensure_ascii=False)
+        json.dump([V.pulisci(ln if isinstance(ln, str) else ln.get("text", "")) for ln in lines], open(flat, "w", encoding="utf-8"), ensure_ascii=False)
         run([sys.executable, os.path.join(V.KIT, "words.py"), self.vo, flat])
 
     def words(self): return json.load(open(os.path.join(self.out, "voce.words.json"), encoding="utf-8"))

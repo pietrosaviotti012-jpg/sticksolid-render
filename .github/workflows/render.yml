@@ -40,6 +40,7 @@ env:
   SLICES: 6
   OFFICE_URL: ${{ secrets.OFFICE_URL }}
   STUDIO_SECRET: ${{ secrets.STUDIO_SECRET }}
+  ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
 
 jobs:
   voce:
